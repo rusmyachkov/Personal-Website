@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./pages/index.css">
+  <title>Myachkov Ruslan Personal Website</title>
+</head>
+<body class="root">
+  <main class="grid">
+    <section class="home" id="sectionHome">
+      <div class="home__name" id="homeName">
+        <p class="home__title home__title_orange">ruslan</p>
+        <div class="home__rectangle home__rectangle_orange"></div>
+      </div>
+      <div class="home__inst" id="homeInst">
+        <a href="#" class="home__title home__title_orange" >instagram</a>
+        <div class="home__rectangle home__rectangle_orange"></div>
+      </div>
+      <div class="home__surname" id="homeSurname">
+        <div class="home__rectangle home__rectangle_blue"></div>
+        <p class="home__title home__title_blue">myachkov</p>
+      </div>
+      <div class="home__mail" id="homeMail">
+        <div class="home__rectangle home__rectangle_blue"></div>
+        <a href="#" class="home__title home__title_blue">mail</a>
+      </div>
+      <div class="home__job" id="homeJob">
+        <p class="home__title home__title_yellow">designer</p>
+        <div class="home__rectangle home__rectangle_yellow"></div>
+      </div>
+      <div class="home__tg" id="homeTg">
+        <a href="#" class="home__title home__title_yellow">telegram</a>
+        <div class="home__rectangle home__rectangle_yellow"></div>
+      </div>
+      <div class="home__dscr" id="homeDscr">
+        <div class="home__rectangle home__rectangle_green"></div>
+        <p class="home__dscr__text">Digital Nomad, <br />Freelancer</p>
+      </div>
+      <div class="home__linkedin" id="homeLinkedin">
+        <div class="home__rectangle home__rectangle_green"></div>
+        <a href="#" class="home__title home__title_green">linkedin</a>
+      </div>
+      <div class="home__pinterest" id="homePinterest">
+        <a href="#" class="home__title home__title_red">pinterest</a>
+        <div class="home__rectangle home__rectangle_red"></div>
+      </div>
+    </section>
+    <section class="works" id="sectionWorks">
+      <div class="works__grid">
+        <div class="works__card"></div>
+        <div class="works__card"></div>
+        <div class="works__card"></div>
+        <div class="works__card"></div>
+        <div class="works__card"></div>
+        <div class="works__card"></div>
+      </div>
+    </section>
+    <section class="notes" id="sectionNotes">
+      <div class="notes__title-group">
+        <p class="notes__title">ruslan is typing...</p>
+        <div class="notes__rectangle"></div>
+      </div>
+      <div class="notes__grid">
+        <div class="notes__card"></div>
+        <div class="notes__card"></div>
+        <div class="notes__card"></div>
+        <div class="notes__card"></div>
+      </div>
+    </section>
+    <section class="photos" id="sectionPhotos">
+      <div class="photos__grid">
+        <img src="images/photos-grid-1.png" class="photos__card"></img>
+        <img src="images/photos-grid-2.png" class="photos__card"></img>
+        <img src="images/photos-grid-3.png" class="photos__card"></img>
+        <img src="images/photos-grid-4.png" class="photos__card"></img>
+        <img src="images/photos-grid-5.png" class="photos__card"></img>
+        <img src="images/photos-grid-6.png" class="photos__card"></img>
+      </div>
+    </section>
+    <section class="about" id="sectionAbout">
+      <div class="about__content-group">
+        <div class="about__tr">
+          <h1 class="about__title">hey,</h1>
+          <div class="about_rectangle"></div>
+        </div>
+        <div class="about__text-group">
+          <p class="about__text">First of all I tend to make people's lives better than before, with the help of design, creative ideas, and technologies. It's drive me work hard and be self-motivated to jump into the next level and absorb new knowledge and skills constantly in any situation. For me, design is about people, so if you put business needs first, we probably will not work well together.///First of all I tend to make people's lives better than before, with the help of design, creative ideas, and technologies. It's drive me work hard and be self-motivated to jump into the next level and absorb new knowledge and skills constantly in any situation. For me, design is about people, so if you put business needs first, we probably will not work well together.</p>
+          <p class="about__text"> <span class="about__text_normal">2022–Now, Freelancer.</span> With my friend and co-worker we made a design studio for interesting projects and fun</p>
+          <p class="about__text"> <span class="about__text_normal">2020–2022, Yandex.</span> I took care of user interface and its identity for English by Yandex Praktikum</p>
+          <p class="about__text"> <span class="about__text_normal">2018–2020, Rambler.</span> I've been drawing a website, mobile apps and identity for Afisha.ru</p>
+          <p class="about__text"> <span class="about__text_normal">2016–2018, Artify Agency.</span> Full cycle of creating designs mobile apps and websites, from meeting with the client to presenting ready-made solutions and transferring them to development</p>
+        </div>
+      </div>
+      <img src="images/about_img.png" class="about__selfie"></img>
+    </section>
+    <section class="nav" id="sectionNav">
+      <div class="nav__links">
+        <button onclick="showWorks()" class="nav__link nav__link_works" id="worksButtons">Works</button>
+        <button onclick="showNotes()" class="nav__link nav__link_notes" id="notesButton">Notes</button>
+        <button onclick="showPhotos()" class="nav__link nav__link_photos" id="photosButton">Photos</button>
+        <button onclick="showAbout()" class="nav__link nav__link_about" id="aboutButton">About</button>
+      </div>
+      <div class="nav__rectangle" id="navRectangle"></div>
+    </section>
+    <section class="contacts" id="sectionContacts">
+      <div class="contacts__rectangle"></div>
+      <button onclick="showContacts()" class="contacts__button" id="contactsButton">Get In Touch</button>
+    </section>
+  </main>
+  <script src="./scripts/index.js"></script>
+</body>
+</html>

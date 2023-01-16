@@ -1,0 +1,91 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts/fonts.css);
+@import url(../blocks/root/root.css);
+
+/*GRID*/
+@import url(../blocks/grid/grid.css);
+
+/*HOME*/
+@import url(../blocks/home/home.css);
+
+@import url(../blocks/home/__rectangle/home__rectangle.css);
+@import url(../blocks/home/__rectangle/_orange/home__rectangle_orange.css);
+@import url(../blocks/home/__rectangle/_blue/home__rectangle_blue.css);
+@import url(../blocks/home/__rectangle/_yellow/home__rectangle_yellow.css);
+@import url(../blocks/home/__rectangle/_green/home__rectangle_green.css);
+@import url(../blocks/home/__rectangle/_red/home__rectangle_red.css);
+@import url(../blocks/home/__rectangle/_pink/home__rectangle_pink.css);
+
+@import url(../blocks/home/__title/home__title.css);
+@import url(../blocks/home/__title/_orange/home__title_orange.css);
+@import url(../blocks/home/__title/_blue/home__title_blue.css);
+@import url(../blocks/home/__title/_yellow/home__title_yellow.css);
+@import url(../blocks/home/__title/_green/home__title_green.css);
+@import url(../blocks/home/__title/_red/home__title_red.css);
+@import url(../blocks/home/__title/_pink/home__title_pink.css);
+
+@import url(../blocks/home/__name/home__name.css);
+@import url(../blocks/home/__surname/home__surname.css);
+@import url(../blocks/home/__job/home__job.css);
+
+@import url(../blocks/home/__dscr/home__dscr.css);
+@import url(../blocks/home/__dscr/__text/home__dscr__text.css);
+
+@import url(../blocks/home/__inst/home__inst.css);
+@import url(../blocks/home/__mail/home__mail.css);
+@import url(../blocks/home/__tg/home__tg.css);
+@import url(../blocks/home/__linkedin/home__linkedin.css);
+@import url(../blocks/home/__pinterest/home__pinterest.css);
+
+
+/*WORKS*/
+@import url(../blocks/works/works.css);
+@import url(../blocks/works/__grid/works__grid.css);
+@import url(../blocks/works/__card/works__card.css);
+
+
+/*NOTES*/
+@import url(../blocks/notes/notes.css);
+@import url(../blocks/notes/__tittle-group/notes__title-group.css);
+@import url(../blocks/notes/__title/notes__title.css);
+@import url(../blocks/notes/__rectangle/notes__rectangle.css);
+@import url(../blocks/notes/__grid/notes__grid.css);
+@import url(../blocks/notes/__card/notes__card.css);
+
+
+/*PHOTOS*/
+@import url(../blocks/photos/photos.css);
+@import url(../blocks/photos/__grid/photos__grid.css);
+@import url(../blocks/photos/__card/photos__card.css);
+
+
+/*ABOUT*/
+@import url(../blocks/about/about.css);
+@import url(../blocks/about/__title/about__title.css);
+@import url(../blocks/about/__content-group/about__content-group.css);
+@import url(../blocks/about/__tr/about__tr.css);
+@import url(../blocks/about/__text-group/about__text-group.css);
+@import url(../blocks/about/__rectangle/about__rectangle.css);
+@import url(../blocks/about/__text/about__text.css);
+@import url(../blocks/about/__text/_normal/about__text_normal.css);
+@import url(../blocks/about/__selfie/about__selfie.css);
+
+
+
+/*NAV*/
+@import url(../blocks/nav/nav.css);
+@import url(../blocks/nav/__links/nav__links.css);
+
+@import url(../blocks/nav/__link/nav__link.css);
+@import url(../blocks/nav/__link/_works/nav__link_works.css);
+@import url(../blocks/nav/__link/_notes/nav__link_notes.css);
+@import url(../blocks/nav/__link/_photos/nav__link_photos.css);
+@import url(../blocks/nav/__link/_about/nav__link_about.css);
+
+@import url(../blocks/nav/__rectangle/nav__rectangle.css);
+
+
+/*CONTACTS*/
+@import url(../blocks/contacts/contacts.css);
+@import url(../blocks/contacts/__button/contacts__button.css);
+@import url(../blocks/contacts/__rectangle/contacts__rectangle.css);

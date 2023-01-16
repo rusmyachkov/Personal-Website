@@ -1,0 +1,7 @@
+.works__card {
+  background: #F15A23;
+  min-height: 88vh;
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: fill-available;
+}

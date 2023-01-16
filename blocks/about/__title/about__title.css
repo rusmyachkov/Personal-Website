@@ -1,0 +1,12 @@
+.about__title {
+  font-family: TeX Gyre Heros Cn;
+  font-size: 130px;
+  font-weight: 700;
+  line-height: 130px;
+  letter-spacing: 0px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: auto;
+  text-decoration: none;
+  padding-bottom: 8px;
+}

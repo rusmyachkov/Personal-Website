@@ -1,0 +1,6 @@
+.about__tr {
+  display: flex;
+  height: 138px;
+  gap: 20px;
+  margin-left: 20px;
+}

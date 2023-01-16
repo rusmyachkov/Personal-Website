@@ -1,0 +1,7 @@
+.notes__card {
+  background: #1B1B1B;
+  min-height: 70vh;
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: fill-available;
+}

@@ -1,0 +1,7 @@
+.about__content-group {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: 100%;
+}
+

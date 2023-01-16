@@ -1,0 +1,10 @@
+.photos {
+  display: none;
+  background: #FEF200;
+  height: calc(100% - 106px);
+  overflow-y: scroll;
+}
+
+.photos::-webkit-scrollbar {
+  width: 0;
+}

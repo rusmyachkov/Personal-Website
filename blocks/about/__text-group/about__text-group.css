@@ -1,0 +1,12 @@
+.about__text-group {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px 0 280px;
+  padding-bottom: 40px;
+  overflow-y: scroll;
+}
+
+.about__text-group::-webkit-scrollbar {
+  width: 0;
+}
+

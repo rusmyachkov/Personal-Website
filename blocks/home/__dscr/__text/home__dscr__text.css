@@ -1,0 +1,13 @@
+.home__dscr__text {
+  font-family: TeX Gyre Heros Cn;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  margin: auto 20px auto 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  white-space: nowrap;
+  color: #01A650;
+}

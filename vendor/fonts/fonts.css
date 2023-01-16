@@ -1,0 +1,17 @@
+@font-face {
+  font-family:'TeX Gyre Heros Cn';
+  font-weight: 700;
+  font-style: bold;
+  src: url(TeXGyreHerosCondensed-Bold.woff) format('woff'),
+       url(TeXGyreHerosCondensed-Bold.woff2) format('woff2'),
+       url(TeXGyreHerosCondensed-Bold.otf) format('truetype');
+}
+
+@font-face {
+  font-family:'TeX Gyre Heros Cn';
+  font-weight: 400;
+  font-style: normal;
+  src: url(TeXGyreHerosCondensed-Regular.woff) format('woff'),
+       url(TeXGyreHerosCondensed-Regular.woff2) format('woff2'),
+       url(TeXGyreHerosCondensed-Regular.otf) format('truetype');
+}
