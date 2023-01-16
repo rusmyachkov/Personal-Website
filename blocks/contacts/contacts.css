@@ -1,4 +1,5 @@
 .contacts {
   display: flex;
   gap: 8px;
+  height: 36px;
 }
