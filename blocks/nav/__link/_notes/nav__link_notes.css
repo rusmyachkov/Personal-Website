@@ -1,4 +1,5 @@
 .nav__link_notes {
   display: block;
   width: max-content;
+  cursor: pointer;
 }
