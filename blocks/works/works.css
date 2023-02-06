@@ -1,7 +1,7 @@
 .works {
   display: none;
   background: #BD2323;
-  height: 100%;
+  height: auto;
   overflow-y: scroll;
 }
 

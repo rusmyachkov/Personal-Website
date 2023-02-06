@@ -1,7 +1,7 @@
 .works__card {
   background: #F15A23;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: fit-content;
+  min-height: 88vh;
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: fill-available;
 }

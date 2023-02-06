@@ -1,9 +1,7 @@
 .photos {
   display: none;
   background: #FEF200;
-  /*
-  height: calc(100% - 106px);
-  */
+  height: auto;
   overflow-y: scroll;
 }
 

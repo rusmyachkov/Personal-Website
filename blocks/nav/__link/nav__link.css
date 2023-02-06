@@ -6,8 +6,11 @@
   letter-spacing: -0.01em;
   text-align: left;
   text-decoration: none;
-  color: #BD2323;
   padding: 0;
   background: transparent;
   border: none;
+  width: fit-content;
+  color: #BD2323;
+  cursor: pointer;
+  white-space: nowrap;
 }

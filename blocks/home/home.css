@@ -1,5 +1,11 @@
 .home {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  width: 100%;
+  height: calc(100% - 244px);
+  z-index: 10;
+
+  transition: height .3s ease;
 }
+
+

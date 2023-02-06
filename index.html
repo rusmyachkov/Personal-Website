@@ -6,12 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./pages/index.css">
   <title>Myachkov Ruslan Personal Website</title>
+  <link rel="favicon" href="images/favicon/favicon.png">
 </head>
 <body class="root">
   <main class="grid">
-    <section class="home" id="sectionHome">
+    <section class="content home" id="sectionHome">
       <div class="home__name" id="homeName">
-        <p class="home__title home__title_orange">ruslan</p>
+        <p class="home__title home__title_orange" id="title__ruslan">ruslan</p>
         <div class="home__rectangle home__rectangle_orange"></div>
       </div>
       <div class="home__inst" id="homeInst">
@@ -20,14 +21,14 @@
       </div>
       <div class="home__surname" id="homeSurname">
         <div class="home__rectangle home__rectangle_blue"></div>
-        <p class="home__title home__title_blue">myachkov</p>
+        <p class="home__title home__title_blue" id="title__surname">myachkov</p>
       </div>
       <div class="home__mail" id="homeMail">
         <div class="home__rectangle home__rectangle_blue"></div>
         <a href="#" class="home__title home__title_blue">mail</a>
       </div>
       <div class="home__job" id="homeJob">
-        <p class="home__title home__title_yellow">designer</p>
+        <p class="home__title home__title_yellow" id="title__job">designer</p>
         <div class="home__rectangle home__rectangle_yellow"></div>
       </div>
       <div class="home__tg" id="homeTg">
@@ -36,32 +37,28 @@
       </div>
       <div class="home__dscr" id="homeDscr">
         <div class="home__rectangle home__rectangle_green"></div>
-        <p class="home__dscr__text">Digital Nomad, <br />Freelancer</p>
+        <p class="home__dscr__text" id="title__dscr">Digital Nomad, <br />Freelancer</p>
       </div>
       <div class="home__linkedin" id="homeLinkedin">
         <div class="home__rectangle home__rectangle_green"></div>
-        <a href="#" class="home__title home__title_green">linkedin</a>
+        <a href="#" class="home__title home__title_green" id="title__linkedin">linkedin</a>
       </div>
       <div class="home__pinterest" id="homePinterest">
         <a href="#" class="home__title home__title_red">pinterest</a>
         <div class="home__rectangle home__rectangle_red"></div>
       </div>
     </section>
-    <section class="works" id="sectionWorks">
+    <section class="content works" id="sectionWorks">
       <div class="works__grid">
-        <div class="works__card">
-          <img src="images/works/1.jpg" alt="" class="works__img">
-        </div>
-        <div class="works__card">
-          <img src="images/works/2.jpg" alt="" class="works__img">
-        </div>
-        <div class="works__card">
-          <img src="images/works/3.png" alt="" class="works__img">
-        </div>
+        <div class="works__card"></div>
+        <div class="works__card"></div>
+        <div class="works__card"></div>
+        <div class="works__card"></div>
+        <div class="works__card"></div>
+        <div class="works__card"></div>
       </div>
-      <div class="works__grid-window"></div>
     </section>
-    <section class="notes" id="sectionNotes">
+    <section class="content notes" id="sectionNotes">
       <div class="notes__title-group">
         <p class="notes__title">ruslan is typing...</p>
         <div class="notes__rectangle"></div>
@@ -73,7 +70,7 @@
         <div class="notes__card"></div>
       </div>
     </section>
-    <section class="photos" id="sectionPhotos">
+    <section class="content photos" id="sectionPhotos">
       <div class="photos__grid">
         <img src="images/photos/1.jpg" class="photos__card"></img>
         <img src="images/photos/2.jpg" class="photos__card"></img>
@@ -101,7 +98,7 @@
         <img src="images/photos/24.jpg" class="photos__card"></img>
       </div>
     </section>
-    <section class="about" id="sectionAbout">
+    <section class="content about" id="sectionAbout">
       <div class="about__content-group">
         <div class="about__tr">
           <h1 class="about__title">hey,</h1>
@@ -119,10 +116,11 @@
     </section>
     <section class="nav" id="sectionNav">
       <div class="nav__links">
-        <button onclick="showWorks()" class="nav__link nav__link_works" id="worksButtons">Works</button>
-        <button onclick="showNotes()" class="nav__link nav__link_notes" id="notesButton">Notes</button>
-        <button onclick="showPhotos()" class="nav__link nav__link_photos" id="photosButton">Photos</button>
-        <button onclick="showAbout()" class="nav__link nav__link_about" id="aboutButton">About</button>
+        <button onclick="showBlock('sectionHome')" class="nav__link nav__link_close" id="closeButton">Close ...</button>
+        <button onclick="showBlock('sectionWorks')" class="nav__link nav__link_works" id="worksButtons">Works</button>
+        <button onclick="showBlock('sectionNotes')" class="nav__link nav__link_notes" id="notesButton">Notes</button>
+        <button onclick="showBlock('sectionPhotos')" class="nav__link nav__link_photos" id="photosButton">Photos</button>
+        <button onclick="showBlock('sectionAbout')" class="nav__link nav__link_about" id="aboutButton">About</button>
       </div>
       <div class="nav__rectangle" id="navRectangle"></div>
     </section>

@@ -11,6 +11,9 @@
   margin-right: 8px;
   background: transparent;
   border: none;
-  padding: 2px 0 4px 0;
+  width: fit-content;
   cursor: pointer;
+  padding: 2px 0 4px 8px;
+
+  transition: padding .2s ease;
 }

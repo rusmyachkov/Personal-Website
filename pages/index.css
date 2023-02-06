@@ -5,6 +5,9 @@
 /*GRID*/
 @import url(../blocks/grid/grid.css);
 
+/*CONTENT*/
+@import url(../blocks/content/content.css);
+
 /*HOME*/
 @import url(../blocks/home/home.css);
 
@@ -42,7 +45,6 @@
 @import url(../blocks/works/works.css);
 @import url(../blocks/works/__grid/works__grid.css);
 @import url(../blocks/works/__card/works__card.css);
-@import url(../blocks/works/__img/works__img.css);
 
 
 /*NOTES*/

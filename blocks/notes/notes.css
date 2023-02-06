@@ -2,5 +2,5 @@
   display: none;
   flex-direction: column;
   background: #2E3192;
-  height: calc(100% - 106px);
+  height: auto;
 }
