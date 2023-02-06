@@ -149,6 +149,9 @@ function showContacts() {
 
     sectionContacts.style['gap'] = '0'
 
+    titleName.style['paddingRight'] = '0'
+    homeName.style['gap'] = '20px'
+
     closeButton.style.display = 'none'
 
 
@@ -156,7 +159,9 @@ function showContacts() {
     titleName.textContent = 'instagram'
     titleName.innerHTML = '<a class="home__title home__title_orange" id="title__ruslan" href="https://visuelle.co.uk/episode-7">instagram</a>'
     titleSurname.textContent = 'mail'
+    titleSurname.innerHTML = '<a class="home__title home__title_blue" id="title__surname" href="mailto:rmyachkov@yandex.ru">mail</a>'
     titleJob.textContent = 'telegram'
+    titleJob.innerHTML = '<a class="home__title home__title_yellow" id="title__job" href="https://t.me/rusmyachkov">telegram</a>'
 
     homeDscr.style.display = 'none'
     homeLinkedin.style.display = 'flex'
@@ -176,8 +181,8 @@ function showContacts() {
     sectionHome.style.opacity = '1'
     sectionHome.style.height = 'calc(100% - 36px)'
     sectionHome.style.transition = 'none'
+
+    titleName.style['paddingRight'] = '20px'
+    homeName.style['gap'] = '0'
   }
   }
-
-
-

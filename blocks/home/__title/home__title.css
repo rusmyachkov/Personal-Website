@@ -11,3 +11,7 @@
   margin: auto;
   padding-bottom: 8px;
 }
+
+#title__ruslan {
+  transition: padding .3s ease;
+}
