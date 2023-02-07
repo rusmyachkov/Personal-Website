@@ -25,14 +25,19 @@ let sectionNavLinks = sectionNav.querySelector('.nav__links')
 let sectionContacts = document.getElementById("sectionContacts")
 
 let navRectangle = document.getElementById("navRectangle")
+
 let AboutTextGroup = document.querySelector('.about__text-group')
+let worksGrid = document.getElementById ("works__grid")
 
 let titleName = document.getElementById("title__ruslan")
 let titleSurname = document.getElementById("title__surname")
 let titleJob = document.getElementById("title__job")
 let titleDscr = document.getElementById("title__dscr")
 let titleLinkedin = document.getElementById("title__linkedin")
+let titlePinterest = document.getElementById("title__pinterest")
 
+console.log(titleLinkedin)
+console.log(homeLinkedin)
 
 const pages = [sectionHome, sectionWorks, sectionNotes, sectionPhotos, sectionAbout]
 closeButton.style.display = 'none'
@@ -84,6 +89,7 @@ if (element === sectionWorks) {
   sectionNotes.style.display = 'none'
   sectionPhotos.style.display = 'none'
   sectionAbout.style.display = 'none'
+  sectionWorks.scrollTo(0,0)
 }
 
 if (element === sectionPhotos) {
@@ -151,6 +157,16 @@ function showContacts() {
 
     titleName.style['paddingRight'] = '0'
     homeName.style['gap'] = '20px'
+    titleSurname.style['paddingLeft'] = '0'
+    homeSurname.style['gap'] = '20px'
+    titleJob.style['paddingRight'] = '0'
+    homeJob.style['gap'] = '20px'
+    titleLinkedin.style['paddingLeft'] = '0'
+    homeLinkedin.style['gap'] = '20px'
+    titlePinterest.style['paddingRight'] = '0'
+    homePinterest.style['gap'] = '20px'
+
+
 
     closeButton.style.display = 'none'
 
@@ -163,9 +179,9 @@ function showContacts() {
     titleJob.textContent = 'telegram'
     titleJob.innerHTML = '<a class="home__title home__title_yellow" id="title__job" href="https://t.me/rusmyachkov">telegram</a>'
 
-    homeDscr.style.display = 'none'
     homeLinkedin.style.display = 'flex'
     homePinterest.style.display = 'flex'
+    homeDscr.style.display = 'none'
 
     sectionWorks.style.display = 'none'
     sectionNotes.style.display = 'none'
@@ -184,5 +200,14 @@ function showContacts() {
 
     titleName.style['paddingRight'] = '20px'
     homeName.style['gap'] = '0'
+    titleSurname.style['paddingLeft'] = '20px'
+    homeSurname.style['gap'] = '0'
+    titleJob.style['paddingRight'] = '20px'
+    homeJob.style['gap'] = '0'
+    titleLinkedin.style['paddingLeft'] = '100px'
+    homeLinkedin.style['gap'] = '0'
+    titlePinterest.style['paddingRight'] = '100px'
+    homePinterest.style['gap'] = '0'
+
   }
   }
