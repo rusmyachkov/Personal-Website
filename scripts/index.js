@@ -89,6 +89,7 @@ if (element === sectionWorks) {
   sectionNotes.style.display = 'none'
   sectionPhotos.style.display = 'none'
   sectionAbout.style.display = 'none'
+  sectionHome.style.opacity = '0'
   sectionWorks.scrollTo(0,0)
 }
 

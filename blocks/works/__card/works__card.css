@@ -5,3 +5,29 @@
   padding: 100px;
   box-sizing: border-box;
 }
+
+.works__card_165 {
+  height: 165vh;
+  object-fit: contain;
+}
+
+.works__card_150 {
+  height: 150vh;
+  object-fit: contain;
+}
+
+.works__card_125 {
+  height: 125vh;
+  object-fit: contain;
+}
+
+.works__card_100 {
+  height: 100vh;
+  object-fit: contain;
+}
+
+.works__card_85 {
+  height: 85vh;
+  object-fit: contain;
+}
+
