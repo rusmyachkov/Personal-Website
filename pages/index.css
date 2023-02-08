@@ -72,6 +72,7 @@
 @import url(../blocks/about/__text/about__text.css);
 @import url(../blocks/about/__text/_normal/about__text_normal.css);
 @import url(../blocks/about/__selfie/about__selfie.css);
+@import url(../blocks/about/__video-1/about__video-1.css);
 
 
 
@@ -84,6 +85,7 @@
 @import url(../blocks/nav/__link/_notes/nav__link_notes.css);
 @import url(../blocks/nav/__link/_photos/nav__link_photos.css);
 @import url(../blocks/nav/__link/_about/nav__link_about.css);
+@import url(../blocks/nav/__link/_close/nav__link_close.css);
 
 @import url(../blocks/nav/__rectangle/nav__rectangle.css);
 

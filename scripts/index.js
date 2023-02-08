@@ -98,6 +98,11 @@ if (element === sectionPhotos) {
   sectionWorks.style.display = 'none'
   sectionNotes.style.display = 'none'
   sectionAbout.style.display = 'none'
+  navRectangle.style.background = '#FEF200'
+  closeButton.style.color = '#FEF200'
+} else {
+  navRectangle.style.background = '#BD2323'
+  closeButton.style.color = '#BD2323'
 }
 
 if (element === sectionNotes) {
