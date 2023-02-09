@@ -54,6 +54,8 @@
 @import url(../blocks/notes/__rectangle/notes__rectangle.css);
 @import url(../blocks/notes/__grid/notes__grid.css);
 @import url(../blocks/notes/__card/notes__card.css);
+@import url(../blocks/notes/__card-img/notes__card-img.css);
+@import url(../blocks/notes/__card-text/notes___card-text.css);
 
 
 /*PHOTOS*/

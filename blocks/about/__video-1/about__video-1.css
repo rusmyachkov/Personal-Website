@@ -3,3 +3,10 @@
   max-height: auto;
   margin-top: 25px;
 }
+
+.about__video-2 {
+  max-width: calc(100% / 2.5);
+  max-height: auto;
+  margin-top: 25px;
+  clip-path: circle(50% at 50% 50%);
+}

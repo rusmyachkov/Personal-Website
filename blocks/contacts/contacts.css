@@ -5,6 +5,7 @@
   position: fixed;
   bottom: 0;
   background: #1B1B1B;
+  z-index: 6;
 }
 
 

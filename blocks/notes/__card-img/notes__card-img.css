@@ -1,0 +1,11 @@
+.notes__card-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.notes__card-img-2 {
+  width: calc(100% / 2);
+  height: auto;
+  object-fit: cover;
+}

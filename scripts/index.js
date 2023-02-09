@@ -28,6 +28,7 @@ let navRectangle = document.getElementById("navRectangle")
 
 let AboutTextGroup = document.querySelector('.about__text-group')
 let worksGrid = document.getElementById ("works__grid")
+let notesGrid = document.getElementById("notes_grid")
 
 let titleName = document.getElementById("title__ruslan")
 let titleSurname = document.getElementById("title__surname")
@@ -110,6 +111,7 @@ if (element === sectionNotes) {
   sectionWorks.style.display = 'none'
   sectionPhotos.style.display = 'none'
   sectionAbout.style.display = 'none'
+  notesGrid.scrollTo(0,0)
 }
 
 if (element === sectionAbout) {
@@ -179,11 +181,11 @@ function showContacts() {
 
   } else {
     titleName.textContent = 'instagram'
-    titleName.innerHTML = '<a class="home__title home__title_orange" id="title__ruslan" href="https://visuelle.co.uk/episode-7">instagram</a>'
+    titleName.innerHTML = '<a class="home__title home__title_orange" id="title__ruslan" href="https://www.instagram.com/ruslan_myachkov/" target="_blank">instagram</a>'
     titleSurname.textContent = 'mail'
-    titleSurname.innerHTML = '<a class="home__title home__title_blue" id="title__surname" href="mailto:rmyachkov@yandex.ru">mail</a>'
+    titleSurname.innerHTML = '<a class="home__title home__title_blue" id="title__surname" href="mailto:rmyachkov@yandex.ru" target="_blank">mail</a>'
     titleJob.textContent = 'telegram'
-    titleJob.innerHTML = '<a class="home__title home__title_yellow" id="title__job" href="https://t.me/rusmyachkov">telegram</a>'
+    titleJob.innerHTML = '<a class="home__title home__title_yellow" id="title__job" href="https://t.me/rusmyachkov" target="_blank">telegram</a>'
 
     homeLinkedin.style.display = 'flex'
     homePinterest.style.display = 'flex'
@@ -210,9 +212,9 @@ function showContacts() {
     homeSurname.style['gap'] = '0'
     titleJob.style['paddingRight'] = '20px'
     homeJob.style['gap'] = '0'
-    titleLinkedin.style['paddingLeft'] = '100px'
+    titleLinkedin.style['paddingLeft'] = '20px'
     homeLinkedin.style['gap'] = '0'
-    titlePinterest.style['paddingRight'] = '100px'
+    titlePinterest.style['paddingRight'] = '20px'
     homePinterest.style['gap'] = '0'
 
   }
