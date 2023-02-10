@@ -1,4 +1,7 @@
 .home__surname {
   display: flex;
   gap: 20px;
+  margin-right: 20px;
 }
+
+
