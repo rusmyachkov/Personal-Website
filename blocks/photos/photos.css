@@ -3,8 +3,16 @@
   background: #FEF200;
   height: auto;
   overflow-y: scroll;
+  animation: fadeIn .6s ease;
+}
+
+@keyframes fadeIn {
+  0% { opacity: .5; }
+  100% { opacity: 1; }
 }
 
 .photos::-webkit-scrollbar {
   width: 0;
 }
+
+

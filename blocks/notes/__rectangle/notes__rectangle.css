@@ -1,4 +1,8 @@
 .notes__rectangle {
-  background: #2E3192;
+  background-image: url(../../../images/notes/writing.webp);
   width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
 }

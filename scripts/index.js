@@ -37,8 +37,6 @@ let titleDscr = document.getElementById("title__dscr")
 let titleLinkedin = document.getElementById("title__linkedin")
 let titlePinterest = document.getElementById("title__pinterest")
 
-console.log(titleLinkedin)
-console.log(homeLinkedin)
 
 const pages = [sectionHome, sectionWorks, sectionNotes, sectionPhotos, sectionAbout]
 closeButton.style.display = 'none'

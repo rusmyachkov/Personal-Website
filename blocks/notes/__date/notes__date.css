@@ -1,0 +1,4 @@
+.notes__date {
+  display: flex;
+  flex-direction: column;
+}

@@ -56,6 +56,7 @@
 @import url(../blocks/notes/__card/notes__card.css);
 @import url(../blocks/notes/__card-img/notes__card-img.css);
 @import url(../blocks/notes/__card-text/notes___card-text.css);
+@import url(../blocks/notes/__date/notes__date.css);
 
 
 /*PHOTOS*/
@@ -75,7 +76,7 @@
 @import url(../blocks/about/__text/_normal/about__text_normal.css);
 @import url(../blocks/about/__selfie/about__selfie.css);
 @import url(../blocks/about/__video-1/about__video-1.css);
-
+@import url(../blocks/about/__image/about__image.css);
 
 
 /*NAV*/

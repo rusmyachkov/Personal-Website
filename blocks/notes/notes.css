@@ -4,4 +4,11 @@
   background: #1B1B1B;
   height: calc(100% - 106px);
   z-index: 5;
+  animation: fadeIn .6s ease;
+
+}
+
+@keyframes fadeIn {
+  0% { opacity: .5; }
+  100% { opacity: 1; }
 }

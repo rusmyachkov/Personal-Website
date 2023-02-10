@@ -6,6 +6,12 @@
   height: calc(100% - 106px);
   overflow-y: scroll;
   z-index: 3;
+  animation: fadeIn .6s ease;
+}
+
+@keyframes fadeIn {
+  0% { opacity: .5; }
+  100% { opacity: 1; }
 }
 
 .works::-webkit-scrollbar {
