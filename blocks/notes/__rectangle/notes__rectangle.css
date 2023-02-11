@@ -6,3 +6,11 @@
   background-size: contain;
   background-position: right;
 }
+
+/*
+@media screen and (max-width:1310px) {
+  .notes__rectangle {
+    display: none;
+  }
+}
+*/

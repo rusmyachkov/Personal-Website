@@ -11,3 +11,9 @@
   0% { opacity: .5; }
   100% { opacity: 1; }
 }
+
+@media screen and (orientation: portrait) {
+  .about {
+    flex-direction: column;
+  }
+}

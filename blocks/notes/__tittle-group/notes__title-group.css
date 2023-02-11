@@ -4,3 +4,9 @@
   height: 138px;
   justify-content: space-between;
 }
+
+@media screen and (max-width:760px) {
+  .notes__title-group {
+    height: 84px;
+  }
+}

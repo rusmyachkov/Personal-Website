@@ -1,7 +1,7 @@
 .about__text-group {
   display: flex;
   flex-direction: column;
-  margin: 0 20px 0 280px;
+  margin: 0 0 0 280px;
   padding-bottom: 40px;
   overflow-y: scroll;
 }
@@ -10,3 +10,15 @@
   width: 0;
 }
 
+
+@media screen and (max-width:760px) {
+  .about__text-group {
+    margin: 0 0 0 188px;
+  }
+}
+
+@media screen and (max-width:450px) {
+  .about__text-group {
+    margin: 0 0 0 95px;
+  }
+}

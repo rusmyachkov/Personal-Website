@@ -31,3 +31,39 @@
   object-fit: contain;
 }
 
+
+@media screen and (orientation: portrait) {
+  .works__card {
+    padding: 40px;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .works__card_165 {
+    height: auto;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .works__card_150 {
+    height: auto;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .works__card_125 {
+    height: auto;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .works__card_100 {
+    height: auto;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .works__card_85 {
+    height: auto;
+  }
+}

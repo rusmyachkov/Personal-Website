@@ -6,3 +6,22 @@
   background-image: url(../../../images/about-selfie.png);
   */
 }
+
+.about__selfie-mobile {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (orientation: portrait) {
+  .about__selfie {
+    display: none;
+
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .about__selfie-mobile {
+    display: block;
+  }
+}

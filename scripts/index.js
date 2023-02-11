@@ -157,7 +157,7 @@ function showContacts() {
     sectionHome.style.height = 'calc(100% - 244px)'
 
     contactsButton.style['paddingLeft'] = '8px'
-    contactsButton.textContent = 'Get in Touch'
+    contactsButton.textContent = 'Contacts'
 
     sectionContacts.style['gap'] = '0'
 
@@ -214,6 +214,24 @@ function showContacts() {
     homeLinkedin.style['gap'] = '0'
     titlePinterest.style['paddingRight'] = '20px'
     homePinterest.style['gap'] = '0'
+  }
+  }
 
+
+
+
+
+
+  let myMediaQuery = window.matchMedia('(min-width: 450px) and (max-width: 1330px)');
+  function matchMediaCallback(myMediaQuery) {
+    if(myMediaQuery.matches) {
+      document.querySelector(".notes__title").textContent = "typing...";
+    } else {
+      document.querySelector(".notes__title").textContent = "ruslan is typing...";
+    }
   }
-  }
+  myMediaQuery.addEventListener('change', matchMediaCallback);
+  matchMediaCallback(myMediaQuery);
+
+
+
