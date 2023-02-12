@@ -1,0 +1,9 @@
+.projects__card {
+  background: #F15A23;
+  width: 100%;
+  height: calc(100vh - 106px);
+  padding: 100px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+

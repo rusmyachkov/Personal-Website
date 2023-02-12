@@ -1,0 +1,21 @@
+.contacts__button-projects {
+  font-family: TeX Gyre Heros Cn;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  text-decoration: none;
+  color: #ED018C;
+  white-space: nowrap;
+  margin-right: 8px;
+  background: transparent;
+  border: none;
+  width: fit-content;
+  cursor: pointer;
+  padding: 2px 0 4px 8px;
+
+  transition: padding .3s ease;
+
+  display: none;
+}

@@ -9,11 +9,14 @@ let homeLinkedin = document.getElementById("homeLinkedin")
 let homePinterest = document.getElementById("homePinterest")
 
 let contactsButton = document.getElementById("contactsButton")
+let projectsButton = document.getElementById("projectsButton")
 let worksButtons = document.getElementById("worksButtons")
 let notesButton = document.getElementById("notesButton")
 let photosButton = document.getElementById("photosButton")
 let aboutButton = document.getElementById("aboutButton")
 let closeButton = document.getElementById('closeButton')
+let closeProjectsButton = document.getElementById('closeProjectsButton')
+
 
 let sectionHome = document.getElementById("sectionHome")
 let sectionWorks = document.getElementById("sectionWorks")
@@ -23,6 +26,7 @@ let sectionAbout = document.getElementById("sectionAbout")
 let sectionNav = document.getElementById("sectionNav")
 let sectionNavLinks = sectionNav.querySelector('.nav__links')
 let sectionContacts = document.getElementById("sectionContacts")
+let sectionProjects = document.getElementById("sectionProjects")
 
 let navRectangle = document.getElementById("navRectangle")
 
@@ -37,6 +41,9 @@ let titleDscr = document.getElementById("title__dscr")
 let titleLinkedin = document.getElementById("title__linkedin")
 let titlePinterest = document.getElementById("title__pinterest")
 
+let projectGrid = document.getElementById("projects__grid")
+let ProjectSM = document.getElementById("projects__sm")
+
 
 const pages = [sectionHome, sectionWorks, sectionNotes, sectionPhotos, sectionAbout]
 closeButton.style.display = 'none'
@@ -50,6 +57,7 @@ for (let pageElement of pages) {
 
 let element = document.getElementById(elementId)
 element.style.opacity = '1'
+
 
 if (element === sectionHome) {
   sectionHome.style.height = 'calc(100% - 244px)'
@@ -90,6 +98,13 @@ if (element === sectionWorks) {
   sectionAbout.style.display = 'none'
   sectionHome.style.opacity = '0'
   sectionWorks.scrollTo(0,0)
+  contactsButton.style.display = 'none'
+  projectsButton.style.display = 'block'
+  sectionProjects.style.display = 'none'
+} else {
+  contactsButton.style.display = 'block'
+  projectsButton.style.display = 'none'
+  sectionProjects.style.display = 'none'
 }
 
 if (element === sectionPhotos) {
@@ -121,6 +136,7 @@ if (element === sectionAbout) {
 }
 
   closeButton.textContent = 'Close ' + elementId.substr(7)
+  projectsButton.textContent = 'Projects'
 }
 
 
@@ -219,9 +235,6 @@ function showContacts() {
 
 
 
-
-
-
   let myMediaQuery = window.matchMedia('(min-width: 450px) and (max-width: 1330px)');
   function matchMediaCallback(myMediaQuery) {
     if(myMediaQuery.matches) {
@@ -232,6 +245,42 @@ function showContacts() {
   }
   myMediaQuery.addEventListener('change', matchMediaCallback);
   matchMediaCallback(myMediaQuery);
+
+
+
+
+function showProjects() {
+  if (sectionWorks.style.display === 'none') {
+    sectionWorks.style.display = 'flex'
+    sectionProjects.style.display = 'none'
+    projectsButton.textContent = 'Projects'
+    sectionWorks.scrollTo(0,0)
+  } else {
+    sectionWorks.style.display = 'none'
+    sectionProjects.style.display = 'flex'
+    projectsButton.textContent = 'Images'
+    sectionProjects.scrollTo(0,0)
+  }
+}
+
+
+const soprojects = [ProjectSM]
+
+function showProjectSM(elementId) {
+  for (let pageElement of soprojects) {
+    pageElement.style.display = 'none'
+  }
+
+  let element = document.getElementById(elementId)
+  element.style.display = 'flex'
+
+  if (element === ProjectSM) {
+    projectGrid.style.display = 'none'
+  } else {
+    projectGrid.style.display = 'flex'
+  }
+}
+
 
 
 

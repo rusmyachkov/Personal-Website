@@ -252,6 +252,17 @@
         <img class="works__card" src="images/works/81.webp"></img>
       </div>
     </section>
+    <section class="projects" id="sectionProjects">
+      <div class="projects__grid" id="projects__grid">
+        <div onclick="showProjectSM('projects__sm')" class="projects__card_sm" id="projects__card_sm"></div>
+        <div class="projects__card"></div>
+        <div class="projects__card"></div>
+        <div class="projects__card"></div>
+      </div>
+      <div class="projects__sm" id="projects__sm">
+        <p>Project Page Will Here</p>
+      </div>
+    </section>
     <section class="content notes" id="sectionNotes">
       <div class="notes__title-group">
         <p class="notes__title" id="notes__title">ruslan is typing...</p>
@@ -335,6 +346,7 @@
     <section class="contacts" id="sectionContacts">
       <div class="contacts__rectangle"></div>
       <button onclick="showContacts()" class="contacts__button" id="contactsButton">Contacts</button>
+      <button onclick="showProjects()" class="contacts__button-projects" id="projectsButton">Projects</button>
     </section>
   </main>
   <script src="./scripts/index.js"></script>
