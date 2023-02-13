@@ -17,7 +17,6 @@ let aboutButton = document.getElementById("aboutButton")
 let closeButton = document.getElementById('closeButton')
 let closeProjectsButton = document.getElementById('closeProjectsButton')
 
-
 let sectionHome = document.getElementById("sectionHome")
 let sectionWorks = document.getElementById("sectionWorks")
 let sectionNotes = document.getElementById("sectionNotes")
@@ -27,6 +26,7 @@ let sectionNav = document.getElementById("sectionNav")
 let sectionNavLinks = sectionNav.querySelector('.nav__links')
 let sectionContacts = document.getElementById("sectionContacts")
 let sectionProjects = document.getElementById("sectionProjects")
+let sectionNavProject = document.getElementById("sectionNavProject")
 
 let navRectangle = document.getElementById("navRectangle")
 
@@ -255,12 +255,17 @@ function showProjects() {
     sectionProjects.style.display = 'none'
     projectsButton.textContent = 'Projects'
     sectionWorks.scrollTo(0,0)
+    projectGrid.style.display = 'grid'
+    ProjectSM.style.display = 'none'
   } else {
     sectionWorks.style.display = 'none'
     sectionProjects.style.display = 'flex'
     projectsButton.textContent = 'Images'
     sectionProjects.scrollTo(0,0)
   }
+
+  sectionNavProject.style.display = 'none'
+  sectionNav.style.display ='flex'
 }
 
 
@@ -276,11 +281,26 @@ function showProjectSM(elementId) {
 
   if (element === ProjectSM) {
     projectGrid.style.display = 'none'
+    sectionNav.style.display ='none'
+    sectionNavProject.style.display = 'flex'
+    ProjectSM.style.display = 'flex'
   } else {
-    projectGrid.style.display = 'flex'
+    projectGrid.style.display = 'grid'
+    sectionNav.style.display ='flex'
   }
 }
 
+function showImageGrid() {
+  if(projectGrid.style.display = 'none'){
+  sectionNavProject.style.display = 'none'
+  sectionNav.style.display = 'flex'
+  projectGrid.style.display = 'grid'
+  ProjectSM.style.display = 'none'
+  } else {
+    projectGrid.style.display = 'grid'
+    ProjectSM.style.display = 'none'
+  }
+}
 
 
 

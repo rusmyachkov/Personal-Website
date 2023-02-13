@@ -82,15 +82,16 @@
 /*NAV*/
 @import url(../blocks/nav/nav.css);
 @import url(../blocks/nav/__links/nav__links.css);
-
 @import url(../blocks/nav/__link/nav__link.css);
 @import url(../blocks/nav/__link/_works/nav__link_works.css);
 @import url(../blocks/nav/__link/_notes/nav__link_notes.css);
 @import url(../blocks/nav/__link/_photos/nav__link_photos.css);
 @import url(../blocks/nav/__link/_about/nav__link_about.css);
 @import url(../blocks/nav/__link/_close/nav__link_close.css);
-
 @import url(../blocks/nav/__rectangle/nav__rectangle.css);
+
+/*NAV-PEOJECTS*/
+@import url(../blocks/nav-projects/nav-projects.css);
 
 
 /*CONTACTS*/
