@@ -1,8 +1,0 @@
-.projects__card_sm {
-  background: blueviolet;
-  width: 100%;
-  height: calc(100vh - 106px);
-  padding: 100px;
-  box-sizing: border-box;
-  cursor: pointer;
-}

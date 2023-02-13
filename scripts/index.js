@@ -42,7 +42,7 @@ let titleLinkedin = document.getElementById("title__linkedin")
 let titlePinterest = document.getElementById("title__pinterest")
 
 let projectGrid = document.getElementById("projects__grid")
-let ProjectSM = document.getElementById("projects__sm")
+let projectSM = document.getElementById("project__sm")
 
 
 const pages = [sectionHome, sectionWorks, sectionNotes, sectionPhotos, sectionAbout]
@@ -256,7 +256,7 @@ function showProjects() {
     projectsButton.textContent = 'Projects'
     sectionWorks.scrollTo(0,0)
     projectGrid.style.display = 'grid'
-    ProjectSM.style.display = 'none'
+    projectSM.style.display = 'none'
   } else {
     sectionWorks.style.display = 'none'
     sectionProjects.style.display = 'flex'
@@ -269,7 +269,7 @@ function showProjects() {
 }
 
 
-const soprojects = [ProjectSM]
+const soprojects = [projectSM]
 
 function showProjectSM(elementId) {
   for (let pageElement of soprojects) {
@@ -279,11 +279,11 @@ function showProjectSM(elementId) {
   let element = document.getElementById(elementId)
   element.style.display = 'flex'
 
-  if (element === ProjectSM) {
+  if (element === projectSM) {
     projectGrid.style.display = 'none'
     sectionNav.style.display ='none'
     sectionNavProject.style.display = 'flex'
-    ProjectSM.style.display = 'flex'
+    projectSM.style.display = 'flex'
   } else {
     projectGrid.style.display = 'grid'
     sectionNav.style.display ='flex'
@@ -295,10 +295,10 @@ function showImageGrid() {
   sectionNavProject.style.display = 'none'
   sectionNav.style.display = 'flex'
   projectGrid.style.display = 'grid'
-  ProjectSM.style.display = 'none'
+  projectSM.style.display = 'none'
   } else {
     projectGrid.style.display = 'grid'
-    ProjectSM.style.display = 'none'
+    projectSM.style.display = 'none'
   }
 }
 

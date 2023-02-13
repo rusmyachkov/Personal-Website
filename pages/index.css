@@ -104,6 +104,14 @@
 /*PROJECTS*/
 @import url(../blocks/projects/projects.css);
 @import url(../blocks/projects/__grid/projects__grid.css);
-@import url(../blocks/projects/__card/projects__card.css);
-@import url(../blocks/projects/__card/_sm/projects__card_sm.css);
-@import url(../blocks/projects/__sm/projects__sm.css);
+
+
+/*PROJECT*/
+@import url(../blocks/project/__sm/project__sm.css);
+@import url(../blocks/project/__img/project__img.css);
+@import url(../blocks/project/__text/project__text.css);
+@import url(../blocks/project/__text/_span/project__text_span.css);
+@import url(../blocks/project/__card/project__card.css);
+@import url(../blocks/project/__card/_first/project__card_first.css);
+@import url(../blocks/project/__card/_dom/project__card_dom.css);
+@import url(../blocks/project/__card/_auto/project__card_auto.css);
