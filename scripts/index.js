@@ -136,7 +136,7 @@ if (element === sectionAbout) {
 }
 
   closeButton.textContent = 'Close ' + elementId.substr(7)
-  projectsButton.textContent = 'Projects'
+  projectsButton.textContent = 'Cases'
 }
 
 
@@ -253,7 +253,7 @@ function showProjects() {
   if (sectionWorks.style.display === 'none') {
     sectionWorks.style.display = 'flex'
     sectionProjects.style.display = 'none'
-    projectsButton.textContent = 'Projects'
+    projectsButton.textContent = 'Cases'
     sectionWorks.scrollTo(0,0)
     projectGrid.style.display = 'grid'
     projectSM.style.display = 'none'
