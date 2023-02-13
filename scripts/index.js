@@ -260,7 +260,7 @@ function showProjects() {
   } else {
     sectionWorks.style.display = 'none'
     sectionProjects.style.display = 'flex'
-    projectsButton.textContent = 'Images'
+    projectsButton.textContent = 'Shots'
     sectionProjects.scrollTo(0,0)
   }
 
