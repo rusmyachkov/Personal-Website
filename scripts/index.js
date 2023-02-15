@@ -306,8 +306,10 @@ function showImageGrid() {
     sectionNav.style.display = 'flex'
     projectGrid.style.display = 'grid'
     projectFirst.style.display = 'none'
+    projectSamoosmotr.style.display = 'none'
   } else {
     projectFirst.style.display = 'none'
+    projectSamoosmotr.style.display = 'none'
   }
 }
 
