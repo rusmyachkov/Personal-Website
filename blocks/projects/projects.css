@@ -2,7 +2,7 @@
   display: none;
   flex-direction: column;
   gap: 4px;
-  background: #BD2323;
+  background: #F15A23;
   height: calc(100vh - 106px);
   overflow-y: scroll;
   z-index: 3;

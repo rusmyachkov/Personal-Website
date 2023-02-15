@@ -107,8 +107,8 @@
 
 
 /*PROJECT*/
-@import url(../blocks/project/__sm/project__sm.css);
-@import url(../blocks/project/__img/project__img.css);
+@import url(../blocks/project/__first/project__first.css);
+@import url(../blocks/project/__cover/project__cover.css);
 @import url(../blocks/project/__text/project__text.css);
 @import url(../blocks/project/__text/_span/project__text_span.css);
 @import url(../blocks/project/__card/project__card.css);
@@ -116,3 +116,12 @@
 @import url(../blocks/project/__card/_dom/project__card_dom.css);
 @import url(../blocks/project/__card/_auto/project__card_auto.css);
 @import url(../blocks/project/__card/_samoosmotr/project__card_samoosmotr.css);
+
+@import url(../blocks/project/project.css);
+
+@import url(../blocks/project/__first/project__first.css);
+@import url(../blocks/project/__start-slide/project__start-slide.css);
+@import url(../blocks/project/__start-image/project__start-image.css);
+@import url(../blocks/project/__slide-text/project__slide-text.css);
+
+@import url(../blocks/project/__samoosmotr/project__samoosmotr.css);

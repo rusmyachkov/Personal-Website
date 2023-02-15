@@ -1,0 +1,13 @@
+.project__start-slide {
+  width: 100%;
+  height: calc(100vh - 106px);
+  padding: 100px;
+  background: #F15A23;
+  box-sizing: border-box;
+}
+
+@media screen and (orientation: portrait) {
+  .project__start-slide {
+    padding: 40px;
+  }
+}

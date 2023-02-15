@@ -5,7 +5,7 @@
   width: 100%;
 }
 
-.workd__grid_two {
+.works__grid_two {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 4px;
@@ -14,7 +14,7 @@
 
 
 @media screen and (orientation: portrait) {
-  .workd__grid_two {
+  .works__grid_two {
     grid-template-columns: repeat(1, 1fr);
   }
 }

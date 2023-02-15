@@ -1,0 +1,6 @@
+.project {
+  display: none;
+  width: 100%;
+  background-color: #BD2323;
+  grid-template-rows: repeat(1, 1fr);
+}

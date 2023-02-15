@@ -1,0 +1,18 @@
+.project__slide-text {
+  background: #F15A23;
+
+  font-family: TeX Gyre Heros Cn;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  padding: 100px;
+  color: #FFFFFF;
+}
+
+@media screen and (orientation: portrait) {
+  .project__slide-text {
+    padding: 40px;
+  }
+}

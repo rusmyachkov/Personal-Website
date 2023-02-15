@@ -42,7 +42,9 @@ let titleLinkedin = document.getElementById("title__linkedin")
 let titlePinterest = document.getElementById("title__pinterest")
 
 let projectGrid = document.getElementById("projects__grid")
-let projectSM = document.getElementById("project__sm")
+let projectFirst = document.getElementById("project__first")
+let projectSamoosmotr = document.getElementById("project__samoosmotr")
+
 
 
 const pages = [sectionHome, sectionWorks, sectionNotes, sectionPhotos, sectionAbout]
@@ -256,7 +258,8 @@ function showProjects() {
     projectsButton.textContent = 'Cases'
     sectionWorks.scrollTo(0,0)
     projectGrid.style.display = 'grid'
-    projectSM.style.display = 'none'
+    projectFirst.style.display = 'none'
+    projectSamoosmotr.style.display = 'none'
   } else {
     sectionWorks.style.display = 'none'
     sectionProjects.style.display = 'flex'
@@ -269,36 +272,42 @@ function showProjects() {
 }
 
 
-const soprojects = [projectSM]
+const Cases = [projectFirst, projectSamoosmotr]
 
-function showProjectSM(elementId) {
-  for (let pageElement of soprojects) {
+function showProject(elementId) {
+  for (let pageElement of Cases) {
     pageElement.style.display = 'none'
   }
 
   let element = document.getElementById(elementId)
-  element.style.display = 'flex'
+  element.style.display = 'grid'
 
-  if (element === projectSM) {
+  if (element === projectFirst) {
     projectGrid.style.display = 'none'
     sectionNav.style.display ='none'
     sectionNavProject.style.display = 'flex'
-    projectSM.style.display = 'flex'
   } else {
     projectGrid.style.display = 'grid'
+    sectionNav.style.display ='flex'
+  }
+
+  if (element === projectSamoosmotr) {
+    projectGrid.style.display = 'none'
+    sectionNav.style.display ='none'
+    sectionNavProject.style.display = 'flex'
+  } else {
     sectionNav.style.display ='flex'
   }
 }
 
 function showImageGrid() {
   if(projectGrid.style.display = 'none'){
-  sectionNavProject.style.display = 'none'
-  sectionNav.style.display = 'flex'
-  projectGrid.style.display = 'grid'
-  projectSM.style.display = 'none'
-  } else {
+    sectionNavProject.style.display = 'none'
+    sectionNav.style.display = 'flex'
     projectGrid.style.display = 'grid'
-    projectSM.style.display = 'none'
+    projectFirst.style.display = 'none'
+  } else {
+    projectFirst.style.display = 'none'
   }
 }
 
