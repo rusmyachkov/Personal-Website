@@ -138,7 +138,7 @@ if (element === sectionAbout) {
 }
 
   closeButton.textContent = 'Close ' + elementId.substr(7)
-  projectsButton.textContent = 'Cases'
+  projectsButton.textContent = 'Go to Cases →'
 }
 
 
@@ -255,7 +255,7 @@ function showProjects() {
   if (sectionWorks.style.display === 'none') {
     sectionWorks.style.display = 'flex'
     sectionProjects.style.display = 'none'
-    projectsButton.textContent = 'Cases'
+    projectsButton.textContent = 'Go to Cases →'
     sectionWorks.scrollTo(0,0)
     projectGrid.style.display = 'grid'
     projectFirst.style.display = 'none'
@@ -264,7 +264,7 @@ function showProjects() {
   } else {
     sectionWorks.style.display = 'none'
     sectionProjects.style.display = 'flex'
-    projectsButton.textContent = 'Shots'
+    projectsButton.textContent = '← Go To Shots'
     sectionProjects.scrollTo(0,0)
     projectSamoosmotr.scrollTo(0,0)
   }
