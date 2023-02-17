@@ -3,7 +3,7 @@
   flex-direction: column;
   gap: 4px;
   background: #F15A23;
-  height: calc(100vh - 106px);
+  height: calc(100dvh - 106px);
   overflow-y: scroll;
   z-index: 3;
   animation: fadeIn .6s ease;
