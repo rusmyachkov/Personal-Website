@@ -260,11 +260,13 @@ function showProjects() {
     projectGrid.style.display = 'grid'
     projectFirst.style.display = 'none'
     projectSamoosmotr.style.display = 'none'
+    projectSamoosmotr.scrollTo(0,0)
   } else {
     sectionWorks.style.display = 'none'
     sectionProjects.style.display = 'flex'
     projectsButton.textContent = 'Shots'
     sectionProjects.scrollTo(0,0)
+    projectSamoosmotr.scrollTo(0,0)
   }
 
   sectionNavProject.style.display = 'none'
@@ -286,17 +288,25 @@ function showProject(elementId) {
     projectGrid.style.display = 'none'
     sectionNav.style.display ='none'
     sectionNavProject.style.display = 'flex'
+    projectFirst.scrollTo(0,0)
+    projectSamoosmotr.scrollTo(0,0)
   } else {
     projectGrid.style.display = 'grid'
     sectionNav.style.display ='flex'
+    projectFirst.scrollTo(0,0)
+    projectSamoosmotr.scrollTo(0,0)
   }
 
   if (element === projectSamoosmotr) {
     projectGrid.style.display = 'none'
     sectionNav.style.display ='none'
     sectionNavProject.style.display = 'flex'
+    projectSamoosmotr.scrollTo(0,0)
+    projectSamoosmotr.scrollTo(0,0)
   } else {
     sectionNav.style.display ='flex'
+    projectSamoosmotr.scrollTo(0,0)
+    projectSamoosmotr.scrollTo(0,0)
   }
 }
 

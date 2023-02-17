@@ -118,6 +118,7 @@
 @import url(../blocks/project/__card/_samoosmotr/project__card_samoosmotr.css);
 
 @import url(../blocks/project/project.css);
+@import url(../blocks/project/__video/project__video.css);
 
 @import url(../blocks/project/__first/project__first.css);
 @import url(../blocks/project/__start-slide/project__start-slide.css);
