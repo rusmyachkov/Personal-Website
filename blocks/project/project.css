@@ -5,3 +5,12 @@
   grid-template-rows: repeat(1, 1fr);
   overflow-y: scroll;
 }
+
+
+.project::-webkit-scrollbar {
+  width: 0;
+}
+
+.project::-webkit-scrollbar {
+  display: none;
+}
