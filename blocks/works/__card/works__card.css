@@ -67,3 +67,8 @@
     height: auto;
   }
 }
+
+
+.works__card-nopadding {
+  padding: 0;
+}

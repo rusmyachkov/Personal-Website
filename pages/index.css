@@ -116,13 +116,12 @@
 @import url(../blocks/project/__card/_dom/project__card_dom.css);
 @import url(../blocks/project/__card/_auto/project__card_auto.css);
 @import url(../blocks/project/__card/_samoosmotr/project__card_samoosmotr.css);
-
 @import url(../blocks/project/project.css);
 @import url(../blocks/project/__video/project__video.css);
-
 @import url(../blocks/project/__first/project__first.css);
 @import url(../blocks/project/__start-slide/project__start-slide.css);
 @import url(../blocks/project/__start-image/project__start-image.css);
 @import url(../blocks/project/__slide-text/project__slide-text.css);
-
 @import url(../blocks/project/__samoosmotr/project__samoosmotr.css);
+@import url(../blocks/project/__dom/project__dom.css);
+@import url(../blocks/project/__auto/project__auto.css);

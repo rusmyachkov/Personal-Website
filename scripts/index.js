@@ -44,7 +44,8 @@ let titlePinterest = document.getElementById("title__pinterest")
 let projectGrid = document.getElementById("projects__grid")
 let projectFirst = document.getElementById("project__first")
 let projectSamoosmotr = document.getElementById("project__samoosmotr")
-
+let projectDom = document.getElementById("project__dom")
+let projectAuto = document.getElementById("project__auto")
 
 
 const pages = [sectionHome, sectionWorks, sectionNotes, sectionPhotos, sectionAbout]
@@ -274,7 +275,7 @@ function showProjects() {
 }
 
 
-const Cases = [projectFirst, projectSamoosmotr]
+const Cases = [projectFirst, projectSamoosmotr, projectDom, projectAuto]
 
 function showProject(elementId) {
   for (let pageElement of Cases) {
@@ -289,12 +290,10 @@ function showProject(elementId) {
     sectionNav.style.display ='none'
     sectionNavProject.style.display = 'flex'
     projectFirst.scrollTo(0,0)
-    projectSamoosmotr.scrollTo(0,0)
   } else {
     projectGrid.style.display = 'grid'
     sectionNav.style.display ='flex'
     projectFirst.scrollTo(0,0)
-    projectSamoosmotr.scrollTo(0,0)
   }
 
   if (element === projectSamoosmotr) {
@@ -302,13 +301,33 @@ function showProject(elementId) {
     sectionNav.style.display ='none'
     sectionNavProject.style.display = 'flex'
     projectSamoosmotr.scrollTo(0,0)
-    projectSamoosmotr.scrollTo(0,0)
   } else {
     sectionNav.style.display ='flex'
     projectSamoosmotr.scrollTo(0,0)
-    projectSamoosmotr.scrollTo(0,0)
   }
-}
+
+  if (element === projectAuto) {
+    projectGrid.style.display = 'none'
+    sectionNav.style.display ='none'
+    sectionNavProject.style.display = 'flex'
+    projectAuto.scrollTo(0,0)
+  } else {
+    projectAuto.scrollTo(0,0)
+  }
+
+
+  if (element === projectDom) {
+    projectGrid.style.display = 'none'
+    sectionNav.style.display ='none'
+    sectionNavProject.style.display = 'flex'
+    projectDom.scrollTo(0,0)
+    } else {
+    projectDom.scrollTo(0,0)
+    }
+
+    sectionNav.style.display ='flex'
+
+  }
 
 function showImageGrid() {
   if(projectGrid.style.display = 'none'){
