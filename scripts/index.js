@@ -139,7 +139,7 @@ if (element === sectionAbout) {
 }
 
   closeButton.textContent = 'Close ' + elementId.substr(7)
-  projectsButton.textContent = 'Go to Cases →'
+  projectsButton.textContent = 'Go To Cases →'
 }
 
 
