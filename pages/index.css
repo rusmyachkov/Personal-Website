@@ -117,6 +117,11 @@
 @import url(../blocks/project/__card/_auto/project__card_auto.css);
 @import url(../blocks/project/__card/_samoosmotr/project__card_samoosmotr.css);
 @import url(../blocks/project/__card/_flow-one/project__card_flow-one.css);
+@import url(../blocks/project/__card/_practicum/project__card_practicum.css);
+@import url(../blocks/project/__card/_teko/project__card_teko.css);
+@import url(../blocks/project/__card/_oval/project__card_oval.css);
+@import url(../blocks/project/__card/_easymusic/project__card_easymusic.css);
+@import url(../blocks/project/__card/_afisha/project__card_afisha.css);
 @import url(../blocks/project/project.css);
 @import url(../blocks/project/__video/project__video.css);
 @import url(../blocks/project/__first/project__first.css);
@@ -126,3 +131,7 @@
 @import url(../blocks/project/__samoosmotr/project__samoosmotr.css);
 @import url(../blocks/project/__dom/project__dom.css);
 @import url(../blocks/project/__auto/project__auto.css);
+@import url(../blocks/project/__practicum/project__practicum.css);
+@import url(../blocks/project/__teko/project__teko.css);
+@import url(../blocks/project/__easymusic/project__easymusic.css);
+@import url(../blocks/project/__afisha/project__afisha.css);

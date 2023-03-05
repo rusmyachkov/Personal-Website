@@ -46,7 +46,12 @@ let projectFirst = document.getElementById("project__first")
 let projectSamoosmotr = document.getElementById("project__samoosmotr")
 let projectDom = document.getElementById("project__dom")
 let projectAuto = document.getElementById("project__auto")
+let projectPracticum = document.getElementById("project__practicum")
+let projectTeko = document.getElementById("project__teko")
+let projectEasymusic = document.getElementById("project__easymusic")
+let projectAfisha = document.getElementById("project__afisha")
 
+console.log(projectAfisha)
 
 const pages = [sectionHome, sectionWorks, sectionNotes, sectionPhotos, sectionAbout]
 closeButton.style.display = 'none'
@@ -180,16 +185,16 @@ function showContacts() {
 
     sectionContacts.style['gap'] = '0'
 
+    titleLinkedin.style['paddingLeft'] = '0'
+    homeLinkedin.style['gap'] = '20px'
+    titlePinterest.style['paddingRight'] = '0'
+    homePinterest.style['gap'] = '20px'
     titleName.style['paddingRight'] = '0'
     homeName.style['gap'] = '20px'
     titleSurname.style['paddingLeft'] = '0'
     homeSurname.style['gap'] = '20px'
     titleJob.style['paddingRight'] = '0'
     homeJob.style['gap'] = '20px'
-    titleLinkedin.style['paddingLeft'] = '0'
-    homeLinkedin.style['gap'] = '20px'
-    titlePinterest.style['paddingRight'] = '0'
-    homePinterest.style['gap'] = '20px'
 
 
 
@@ -223,16 +228,17 @@ function showContacts() {
     sectionHome.style.height = 'calc(100% - 36px)'
     sectionHome.style.transition = 'none'
 
+    titleLinkedin.style['paddingLeft'] = '20px'
+    homeLinkedin.style['gap'] = '0'
+    titlePinterest.style['paddingRight'] = '20px'
+    homePinterest.style['gap'] = '0'
     titleName.style['paddingRight'] = '20px'
     homeName.style['gap'] = '0'
     titleSurname.style['paddingLeft'] = '20px'
     homeSurname.style['gap'] = '0'
     titleJob.style['paddingRight'] = '20px'
     homeJob.style['gap'] = '0'
-    titleLinkedin.style['paddingLeft'] = '20px'
-    homeLinkedin.style['gap'] = '0'
-    titlePinterest.style['paddingRight'] = '20px'
-    homePinterest.style['gap'] = '0'
+
   }
   }
 
@@ -275,7 +281,7 @@ function showProjects() {
 }
 
 
-const Cases = [projectFirst, projectSamoosmotr, projectDom, projectAuto]
+const Cases = [projectFirst, projectSamoosmotr, projectDom, projectAuto, projectPracticum, projectTeko, projectEasymusic, projectAfisha]
 
 function showProject(elementId) {
   for (let pageElement of Cases) {
@@ -321,9 +327,45 @@ function showProject(elementId) {
     sectionNav.style.display ='none'
     sectionNavProject.style.display = 'flex'
     projectDom.scrollTo(0,0)
-    } else {
+  } else {
     projectDom.scrollTo(0,0)
-    }
+  }
+
+  if (element === projectPracticum) {
+    projectGrid.style.display = 'none'
+    sectionNav.style.display ='none'
+    sectionNavProject.style.display = 'flex'
+    projectPracticum.scrollTo(0,0)
+  } else {
+    projectPracticum.scrollTo(0,0)
+  }
+
+  if (element === projectTeko) {
+    projectGrid.style.display = 'none'
+    sectionNav.style.display ='none'
+    sectionNavProject.style.display = 'flex'
+    projectTeko.scrollTo(0,0)
+  } else {
+    projectTeko.scrollTo(0,0)
+  }
+
+  if (element === projectEasymusic) {
+    projectGrid.style.display = 'none'
+    sectionNav.style.display ='none'
+    sectionNavProject.style.display = 'flex'
+    projectEasymusic.scrollTo(0,0)
+  } else {
+    projectEasymusic.scrollTo(0,0)
+  }
+
+  if (element === projectAfisha) {
+    projectGrid.style.display = 'none'
+    sectionNav.style.display ='none'
+    sectionNavProject.style.display = 'flex'
+    projectAfisha.scrollTo(0,0)
+  } else {
+    projectAfisha.scrollTo(0,0)
+  }
 
     sectionNav.style.display ='flex'
 
