@@ -89,6 +89,7 @@
 @import url(../blocks/nav/__link/_about/nav__link_about.css);
 @import url(../blocks/nav/__link/_close/nav__link_close.css);
 @import url(../blocks/nav/__rectangle/nav__rectangle.css);
+@import url(../blocks/nav/__link/_close-projet/nav__link_close-project.css);
 
 /*NAV-PEOJECTS*/
 @import url(../blocks/nav-projects/nav-projects.css);
