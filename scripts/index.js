@@ -149,6 +149,7 @@ if (element === sectionAbout) {
   sectionWorks.style.display = 'none'
   sectionPhotos.style.display = 'none'
   AboutTextGroup.scrollTo(0,0)
+  element.querySelectorAll("img").forEach((image) => imageObserver.observe(image));
 }
 
   closeButton.textContent = 'Close ' + elementId.substr(7)
@@ -327,6 +328,7 @@ function showProject(elementId) {
     sectionNav.style.display ='none'
     sectionNavProject.style.display = 'flex'
     projectAuto.scrollTo(0,0)
+    element.querySelectorAll("img").forEach((image) => imageObserver.observe(image));
   } else {
     projectAuto.scrollTo(0,0)
   }
@@ -337,6 +339,7 @@ function showProject(elementId) {
     sectionNav.style.display ='none'
     sectionNavProject.style.display = 'flex'
     projectDom.scrollTo(0,0)
+    element.querySelectorAll("img").forEach((image) => imageObserver.observe(image));
   } else {
     projectDom.scrollTo(0,0)
   }
@@ -346,6 +349,7 @@ function showProject(elementId) {
     sectionNav.style.display ='none'
     sectionNavProject.style.display = 'flex'
     projectPracticum.scrollTo(0,0)
+    element.querySelectorAll("img").forEach((image) => imageObserver.observe(image));
   } else {
     projectPracticum.scrollTo(0,0)
   }
@@ -355,6 +359,7 @@ function showProject(elementId) {
     sectionNav.style.display ='none'
     sectionNavProject.style.display = 'flex'
     projectTeko.scrollTo(0,0)
+    element.querySelectorAll("img").forEach((image) => imageObserver.observe(image));
   } else {
     projectTeko.scrollTo(0,0)
   }
@@ -364,6 +369,7 @@ function showProject(elementId) {
     sectionNav.style.display ='none'
     sectionNavProject.style.display = 'flex'
     projectEasymusic.scrollTo(0,0)
+    element.querySelectorAll("img").forEach((image) => imageObserver.observe(image));
   } else {
     projectEasymusic.scrollTo(0,0)
   }
@@ -373,6 +379,7 @@ function showProject(elementId) {
     sectionNav.style.display ='none'
     sectionNavProject.style.display = 'flex'
     projectAfisha.scrollTo(0,0)
+    element.querySelectorAll("img").forEach((image) => imageObserver.observe(image));
   } else {
     projectAfisha.scrollTo(0,0)
   }
