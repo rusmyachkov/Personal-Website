@@ -304,6 +304,7 @@ function showProject(elementId) {
     sectionNav.style.display ='none'
     sectionNavProject.style.display = 'flex'
     projectFirst.scrollTo(0,0)
+    element.querySelectorAll("img").forEach((image) => imageObserver.observe(image));
   } else {
     projectGrid.style.display = 'grid'
     sectionNav.style.display ='flex'
@@ -315,6 +316,7 @@ function showProject(elementId) {
     sectionNav.style.display ='none'
     sectionNavProject.style.display = 'flex'
     projectSamoosmotr.scrollTo(0,0)
+    element.querySelectorAll("img").forEach((image) => imageObserver.observe(image));
   } else {
     sectionNav.style.display ='flex'
     projectSamoosmotr.scrollTo(0,0)
