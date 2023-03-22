@@ -129,6 +129,7 @@ if (element === sectionPhotos) {
   sectionAbout.style.display = 'none'
   navRectangle.style.background = '#FEF200'
   closeButton.style.color = '#FEF200'
+  element.querySelectorAll("img").forEach((image) => imageObserver.observe(image));
 } else {
   navRectangle.style.background = '#BD2323'
   closeButton.style.color = '#BD2323'
