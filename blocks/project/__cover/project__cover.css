@@ -1,4 +1,12 @@
 .project__cover {
   width: 100%;
   height: auto;
+  mix-blend-mode: normal;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+
+.project__cover:hover {
+  mix-blend-mode: difference;
 }
