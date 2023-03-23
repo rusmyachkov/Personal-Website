@@ -97,7 +97,6 @@ if (element === sectionHome) {
   closeButton.style.display = 'block'
   sectionNavLinks.style['width'] = 'fit-content'
   sectionNavLinks.style['padding-right'] = '20px'
-
   worksButtons.style.display = 'none'
   notesButton.style.display = 'none'
   photosButton.style.display = 'none'
@@ -152,6 +151,7 @@ if (element === sectionAbout) {
   AboutTextGroup.scrollTo(0,0)
   element.querySelectorAll("img").forEach((image) => imageObserver.observe(image));
 }
+
 
   closeButton.textContent = 'Close ' + elementId.substr(7)
   projectsButton.textContent = 'Go To Cases →'
