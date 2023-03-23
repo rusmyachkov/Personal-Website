@@ -10,3 +10,9 @@
 .project__cover:hover {
   mix-blend-mode: difference;
 }
+
+
+.project__cover_nohover {
+  width: 100%;
+  height: auto;
+}
