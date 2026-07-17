@@ -4,21 +4,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script>
-    // Восстанавливаем "настоящий" адрес после редиректа с /404.html.
-    // GitHub Pages показывает 404.html для любого адреса, которого нет
-    // среди файлов репозитория (например /Personal-Website/works) —
-    // а он временно кладёт нужный адрес в параметр ?redirect=...
-    // Подробное объяснение — в файле /404.html в корне репозитория.
-    (function () {
-      var params = new URLSearchParams(window.location.search);
-      var redirect = params.get('redirect');
-      if (redirect) {
-        var basePath = '/Personal-Website';
-        history.replaceState(null, '', basePath + redirect);
-      }
-    })();
-  </script>
   <link rel="stylesheet" href="./pages/index.css">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -380,13 +365,56 @@
       </div>
     </section>
     <section class="projects" id="sectionProjects">
-      <!--
-        Карточки кейсов сюда добавляются автоматически скриптом
-        scripts/cases-data.js на основе массива CASES.
-        Чтобы добавить новый кейс — редактируйте scripts/cases-data.js,
-        а не этот блок.
-      -->
-      <div class="projects__grid" id="projects__grid"></div>
+      <div class="projects__grid" id="projects__grid">
+        <div class="project__card project__card_nda" id="project__card-sm">
+          <img src="images/projects/covers/NDA.webp" alt="" class="project__cover_nohover">
+          <p class="project__text">NDA,<br/><span class="project__text_span">2023, Soon</span> </p>
+        </div>
+        <div class="project__card project__card_flow-one" id="project__card-sm">
+          <img src="images/projects/covers/flowone.png" alt="" class="project__cover_nohover">
+          <p class="project__text">Flow-One,<br/><span class="project__text_span">2023, Soon</span> </p>
+        </div>
+        <div onclick="showProject('project__samoosmotr')" class="project__card project__card_samoosmotr" id="project__card-sm">
+          <video class="project__cover lazy" width='100%' autoplay='true' playsinline='' loop='true' muted='true\' poster="images/placeholder/SM-SamoosmotrCover.webp">
+            <source data-src='https://www.dropbox.com/s/uz5f1ymajkabull/samoosmotr_compressed.mp4?raw=1' type='video/mp4'>
+          </video>
+          <p class="project__text">NDA Client,<br/><span class="project__text_span">Product Design, 2022</span> </p>
+        </div>
+        <div onclick="showProject('project__first')" class="project__card project__card_first" id="project__card-sm">
+          <img src="images/projects/covers/first.webp" alt="" class="project__cover">
+          <p class="project__text">First,<br/><span class="project__text_span">Identity, Website, 2022</span> </p>
+        </div>
+        <div onclick="showProject('project__dom')" class="project__card project__card_dom" id="project__card-sm">
+          <video class="project__cover lazy" width='100%' autoplay='true' playsinline='' loop='true' muted='true\' poster="images/placeholder/dom-cover.webp">
+            <source data-src='https://www.dropbox.com/s/vp1lossmt7j7zoe/dom.mp4?raw=1' type='video/mp4'>
+          </video>
+          <p class="project__text">Moi Servis Home,<br/><span class="project__text_span">Product Design, 2022</span> </p>
+        </div>
+        <div onclick="showProject('project__auto')" class="project__card project__card_auto" id="project__card-sm">
+          <video class="project__cover lazy" width='100%' autoplay='true' playsinline='' loop='true' muted='true\' poster="images/placeholder/auto-cover.webp">
+            <source data-src='https://www.dropbox.com/s/p7pkq5vozzj71on/auto.mp4?raw=1' type='video/mp4'>
+          </video>
+          <p class="project__text">Moi Servis Auto,<br/><span class="project__text_span">Product Design, 2022</span> </p>
+        </div>
+        <div onclick="showProject('project__practicum')" class="project__card project__card_practicum" id="project__card-sm">
+          <img src="images/projects/covers/practicum.webp" alt="" class="project__cover">
+          <p class="project__text">English by Yandex Practicum,<br/><span class="project__text_span">Product Design, 2020-2022</span> </p>
+        </div>
+        <div onclick="showProject('project__teko')" class="project__card project__card_teko" id="project__card-sm">
+          <img src="images/projects/covers/teko.webp" alt="" class="project__cover">
+          <p class="project__text">Teko,<br/><span class="project__text_span">Website, 2021</span> </p>
+        </div>
+        <div onclick="showProject('project__easymusic')" class="project__card project__card_easymusic" id="project__card-sm">
+          <video class="project__cover lazy" width='100%' autoplay='true' playsinline='' loop='true' muted='true\' poster="images/placeholder/easymusic_compressed.webp">
+            <source data-src='https://www.dropbox.com/s/xj8046pbbdzp8ot/easymusic_compressed.mp4?raw=1' type='video/mp4'>
+          </video>
+          <p class="project__text project__text-easymusic">Easymusic,<br/><span class="project__text_span">Identity, Website, 2021</span> </p>
+        </div>
+        <div onclick="showProject('project__afisha')" class="project__card project__card_afisha" id="project__card-sm">
+          <img src="images/projects/covers/afisha.webp" class="project__cover">
+          <p class="project__text project__text-afisha">Afisha,<br/><span class="project__text_span">Concept, 2019</span> </p>
+        </div>
+      </div>
       <div class="project project__first" id="project__first">
         <div class="project__start-slide">
           <img data-src="https://www.dropbox.com/s/5ct1zgeoeqacv01/17.webp?raw=1" class="project__start-image">
@@ -845,28 +873,26 @@
     </section>
     <section class="nav" id="sectionNav">
       <div class="nav__links">
-        <button onclick="navigate([])" class="nav__link nav__link_close" id="closeButton">Close ...</button>
-        <button onclick="navigate(['works'])" class="nav__link nav__link_works" id="worksButtons">Works</button>
-        <button onclick="navigate(['notes'])" class="nav__link nav__link_notes" id="notesButton">Notes</button>
-        <button onclick="navigate(['photos'])" class="nav__link nav__link_photos" id="photosButton">Photos</button>
-        <button onclick="navigate(['about'])" class="nav__link nav__link_about" id="aboutButton">About</button>
+        <button onclick="showBlock('sectionHome')" class="nav__link nav__link_close" id="closeButton">Close ...</button>
+        <button onclick="showBlock('sectionWorks')" class="nav__link nav__link_works" id="worksButtons">Works</button>
+        <button onclick="showBlock('sectionNotes')" class="nav__link nav__link_notes" id="notesButton">Notes</button>
+        <button onclick="showBlock('sectionPhotos')" class="nav__link nav__link_photos" id="photosButton">Photos</button>
+        <button onclick="showBlock('sectionAbout')" class="nav__link nav__link_about" id="aboutButton">About</button>
       </div>
       <div class="nav__rectangle" id="navRectangle"></div>
     </section>
     <section class="nav-projects" id="sectionNavProject">
       <div class="nav__links">
-        <button onclick="closeCaseRoute()" class="nav__link nav__link_projects-close" id="closeProjectsButton">Close</button>
+        <button onclick="showImageGrid('projects__grid')" class="nav__link nav__link_projects-close" id="closeProjectsButton">Close</button>
       </div>
       <div class="nav__rectangle" id="navRectangle"></div>
     </section>
     <section class="contacts" id="sectionContacts">
       <div class="contacts__rectangle"></div>
-      <button onclick="toggleContactsRoute()" class="contacts__button" id="contactsButton">Contacts</button>
-      <button onclick="toggleCasesRoute()" class="contacts__button_projects" id="projectsButton">Go To Cases →</button>
+      <button onclick="showContacts()" class="contacts__button" id="contactsButton">Contacts</button>
+      <button onclick="showProjects()" class="contacts__button_projects" id="projectsButton">Go To Cases →</button>
     </section>
   </main>
-  <script src="./scripts/cases-data.js"></script>
   <script src="./scripts/index.js"></script>
-  <script src="./scripts/router.js"></script>
 </body>
 </html>
