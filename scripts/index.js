@@ -159,9 +159,8 @@ if (element === sectionAbout) {
 
 
 
-// Возвращает главный экран в обычное состояние (закрывает блок контактов).
-// Это старая ветка "if" из showContacts().
-function closeContactsToHome() {
+function showContacts() {
+  if (titleName.textContent === 'instagram') {
     titleName.textContent = 'ruslan'
     titleSurname.textContent = 'myachkov'
     titleJob.textContent = 'designer'
@@ -207,12 +206,12 @@ function closeContactsToHome() {
     titleJob.style['paddingRight'] = '0'
     homeJob.style['gap'] = '20px'
 
-    closeButton.style.display = 'none'
-}
 
-// Переключает главный экран в режим показа контактов (instagram/mail/telegram).
-// Это старая ветка "else" из showContacts().
-function openContacts() {
+
+    closeButton.style.display = 'none'
+
+
+  } else {
     titleName.textContent = 'instagram'
     titleName.innerHTML = '<a class="home__title home__title_orange" id="title__ruslan" href="https://www.instagram.com/ruslan_myachkov/" target="_blank">instagram</a>'
     titleSurname.textContent = 'mail'
@@ -249,28 +248,9 @@ function openContacts() {
     homeSurname.style['gap'] = '0'
     titleJob.style['paddingRight'] = '20px'
     homeJob.style['gap'] = '0'
-}
 
-// Оставлена для обратной совместимости — просто переключает между
-// openContacts() и closeContactsToHome() в зависимости от текущего состояния.
-// Клики в интерфейсе теперь используют toggleContactsRoute() из router.js,
-// чтобы заодно обновлять адрес страницы.
-function showContacts() {
-  if (titleName.textContent === 'instagram') {
-    closeContactsToHome()
-  } else {
-    openContacts()
   }
-}
-
-// Если контакты сейчас открыты — закрывает их. Если уже закрыты — ничего
-// не делает. Используется роутером перед показом любого другого раздела
-// (works/notes/photos/about/home), чтобы не остаться в режиме контактов.
-function ensureContactsClosed() {
-  if (titleName.textContent === 'instagram') {
-    closeContactsToHome()
   }
-}
 
 
 
@@ -288,73 +268,126 @@ function ensureContactsClosed() {
 
 
 
-// Показывает сетку "шотов" (обычный Works), скрывая сетку кейсов.
-// Это старая ветка "if" из showProjects().
-function ensureCasesClosed() {
-  sectionWorks.style.display = 'flex'
-  sectionProjects.style.display = 'none'
-  projectsButton.textContent = 'Go to Cases →'
-  sectionWorks.scrollTo(0,0)
-  projectGrid.style.display = 'grid'
-  projectFirst.style.display = 'none'
-  projectSamoosmotr.style.display = 'none'
-  projectSamoosmotr.scrollTo(0,0)
-
-  sectionNavProject.style.display = 'none'
-  sectionNav.style.display = 'flex'
-}
-
-// Показывает сетку кейсов ("Go to Cases"), скрывая обычный Works.
-// Это старая ветка "else" из showProjects().
-function ensureCasesOpen() {
-  sectionWorks.style.display = 'none'
-  sectionProjects.style.display = 'flex'
-  projectsButton.textContent = '← Go To Shots'
-  sectionProjects.scrollTo(0,0)
-  projectSamoosmotr.scrollTo(0,0)
-
-  sectionNavProject.style.display = 'none'
-  sectionNav.style.display = 'flex'
-}
-
-// Оставлена для обратной совместимости — просто переключает состояние.
-// Клики в интерфейсе используют toggleCasesRoute() из router.js.
 function showProjects() {
   if (sectionWorks.style.display === 'none') {
-    ensureCasesClosed()
+    sectionWorks.style.display = 'flex'
+    sectionProjects.style.display = 'none'
+    projectsButton.textContent = 'Go to Cases →'
+    sectionWorks.scrollTo(0,0)
+    projectGrid.style.display = 'grid'
+    projectFirst.style.display = 'none'
+    projectSamoosmotr.style.display = 'none'
+    projectSamoosmotr.scrollTo(0,0)
   } else {
-    ensureCasesOpen()
+    sectionWorks.style.display = 'none'
+    sectionProjects.style.display = 'flex'
+    projectsButton.textContent = '← Go To Shots'
+    sectionProjects.scrollTo(0,0)
+    projectSamoosmotr.scrollTo(0,0)
   }
+
+  sectionNavProject.style.display = 'none'
+  sectionNav.style.display ='flex'
 }
 
 
-// Список DOM-элементов всех кейсов, у которых есть детальная страница.
-// Строится автоматически из CASES (см. scripts/cases-data.js) — при
-// добавлении нового кейса в тот файл он появится здесь сам.
-const Cases = CASES.filter(function (c) {
-  return c.elementId
-}).map(function (c) {
-  return document.getElementById(c.elementId)
-})
+const Cases = [projectFirst, projectSamoosmotr, projectDom, projectAuto, projectPracticum, projectTeko, projectEasymusic, projectAfisha]
 
-// Показывает один конкретный кейс по id его блока (например "project__dom"),
-// скрывая все остальные. Логика одинакова для любого кейса, поэтому раньше
-// написанные вручную 8 одинаковых блоков заменены на один общий.
 function showProject(elementId) {
   for (let pageElement of Cases) {
     pageElement.style.display = 'none'
   }
 
   let element = document.getElementById(elementId)
-  if (!element) return
-
   element.style.display = 'grid'
-  projectGrid.style.display = 'none'
-  sectionNav.style.display = 'none'
-  sectionNavProject.style.display = 'flex'
-  element.scrollTo(0,0)
-  element.querySelectorAll("img").forEach((image) => imageObserver.observe(image));
-}
+
+  if (element === projectFirst) {
+    projectGrid.style.display = 'none'
+    sectionNav.style.display ='none'
+    sectionNavProject.style.display = 'flex'
+    projectFirst.scrollTo(0,0)
+    element.querySelectorAll("img").forEach((image) => imageObserver.observe(image));
+  } else {
+    projectGrid.style.display = 'grid'
+    sectionNav.style.display ='flex'
+    projectFirst.scrollTo(0,0)
+  }
+
+  if (element === projectSamoosmotr) {
+    projectGrid.style.display = 'none'
+    sectionNav.style.display ='none'
+    sectionNavProject.style.display = 'flex'
+    projectSamoosmotr.scrollTo(0,0)
+    element.querySelectorAll("img").forEach((image) => imageObserver.observe(image));
+  } else {
+    sectionNav.style.display ='flex'
+    projectSamoosmotr.scrollTo(0,0)
+  }
+
+  if (element === projectAuto) {
+    projectGrid.style.display = 'none'
+    sectionNav.style.display ='none'
+    sectionNavProject.style.display = 'flex'
+    projectAuto.scrollTo(0,0)
+    element.querySelectorAll("img").forEach((image) => imageObserver.observe(image));
+  } else {
+    projectAuto.scrollTo(0,0)
+  }
+
+
+  if (element === projectDom) {
+    projectGrid.style.display = 'none'
+    sectionNav.style.display ='none'
+    sectionNavProject.style.display = 'flex'
+    projectDom.scrollTo(0,0)
+    element.querySelectorAll("img").forEach((image) => imageObserver.observe(image));
+  } else {
+    projectDom.scrollTo(0,0)
+  }
+
+  if (element === projectPracticum) {
+    projectGrid.style.display = 'none'
+    sectionNav.style.display ='none'
+    sectionNavProject.style.display = 'flex'
+    projectPracticum.scrollTo(0,0)
+    element.querySelectorAll("img").forEach((image) => imageObserver.observe(image));
+  } else {
+    projectPracticum.scrollTo(0,0)
+  }
+
+  if (element === projectTeko) {
+    projectGrid.style.display = 'none'
+    sectionNav.style.display ='none'
+    sectionNavProject.style.display = 'flex'
+    projectTeko.scrollTo(0,0)
+    element.querySelectorAll("img").forEach((image) => imageObserver.observe(image));
+  } else {
+    projectTeko.scrollTo(0,0)
+  }
+
+  if (element === projectEasymusic) {
+    projectGrid.style.display = 'none'
+    sectionNav.style.display ='none'
+    sectionNavProject.style.display = 'flex'
+    projectEasymusic.scrollTo(0,0)
+    element.querySelectorAll("img").forEach((image) => imageObserver.observe(image));
+  } else {
+    projectEasymusic.scrollTo(0,0)
+  }
+
+  if (element === projectAfisha) {
+    projectGrid.style.display = 'none'
+    sectionNav.style.display ='none'
+    sectionNavProject.style.display = 'flex'
+    projectAfisha.scrollTo(0,0)
+    element.querySelectorAll("img").forEach((image) => imageObserver.observe(image));
+  } else {
+    projectAfisha.scrollTo(0,0)
+  }
+
+    sectionNav.style.display ='flex'
+
+  }
 
 function showImageGrid() {
   if(projectGrid.style.display = 'none'){
