@@ -281,7 +281,7 @@ export function mountCases(section, onChange = () => {}) {
     for (const { item, more, paragraph } of cards) {
       const copy = caseCopy(item, isRu);
       updateDescription(paragraph, copy);
-      more.textContent = isRu ? 'Подробнее' : 'More';
+      more.textContent = isRu ? 'Кейс' : 'More';
       more.setAttribute('aria-label', isRu ? `Подробнее: ${copy.title}` : `More about ${copy.title}`);
     }
     updateSelectionLabels(isRu);
