@@ -1,4 +1,4 @@
-import { measureScene, wrapIntroWords } from '../../scene-layout.mjs?v=figma-components-5';
+import { measureScene, wrapIntroWords } from '../../scene-layout.mjs?v=figma-components-6';
 
 // Windows wheel events arrive in larger steps than trackpad scrolling. Smooth
 // those steps without taking over touch input or the case/gallery scroll areas.
@@ -16,7 +16,7 @@ if (/Windows/i.test(navigator.userAgent) && matchMedia('(pointer: fine)').matche
 
 // Standalone comparison: native scroll with a scrubbed GSAP timeline.
 if (!window.gsap || !window.ScrollTrigger) {
-  import('../../app.js?v=works-2');
+  import('../../app.js?v=works-6');
 } else {
   const gsap = window.gsap;
   const ScrollTrigger = window.ScrollTrigger;
@@ -62,7 +62,7 @@ if (!window.gsap || !window.ScrollTrigger) {
     gsap.set(columnTiles.flat(), { x: 0, y: 0, opacity: 1 });
     gsap.set(hint, { x: 0, y: 0, opacity: 1 });
     gsap.set(portrait, { autoRound: false, left: startX, top: startY, width: startW, height: startH });
-    gsap.set(caption, { autoRound: false, fontSize: 18, lineHeight: '22px', letterSpacing: '-0.5px', bottom: 20, left: 20, right: 20, gap: 12 });
+    gsap.set(caption, { autoRound: false, fontSize: 18, lineHeight: '22px', letterSpacing: '-0.4px', bottom: 20, left: 20, right: 20, gap: 12 });
     gsap.set(captionText, { scale: 1, marginTop: 0, transformOrigin: 'center bottom' });
     gsap.set(monogram, { width: 32, height: 32 });
     gsap.set(intro, { autoAlpha: 0 });

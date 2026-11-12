@@ -7,10 +7,10 @@
   --color-background: #f9f9fa;
   --font-small-size: 18px;
   --font-small-leading: 22px;
-  --font-small-tracking: -.5px;
+  --font-small-tracking: -.4px;
   --font-big-size: 36px;
   --font-big-leading: 40px;
-  --font-big-tracking: -1.5px;
+  --font-big-tracking: -1.3px;
   color: var(--color-black);
   background: var(--color-background);
 }

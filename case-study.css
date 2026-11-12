@@ -28,7 +28,7 @@ html.case-study-open, html.case-study-open.lenis.lenis-stopped { overflow: hidde
   }
 }
 .study-hero img { object-fit:cover; }
-.study-copy { font-size:18px; line-height:22px; letter-spacing:-.5px; }
+.study-copy { font-size:18px; line-height:22px; letter-spacing:-.4px; }
 .study-copy p { margin:0; }
 .study-copy .muted { color:rgb(0 0 0 / 50%); }
 .study-copy .date { margin-top:10px; color:rgb(0 0 0 / 50%); }

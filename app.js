@@ -1,4 +1,4 @@
-import { measureScene, wrapIntroWords } from './scene-layout.mjs?v=figma-components-5';
+import { measureScene, wrapIntroWords } from './scene-layout.mjs?v=figma-components-6';
 
 const runway = document.querySelector('.intro-runway');
 const stage = document.querySelector('.intro-stage');
@@ -84,7 +84,7 @@ function render() {
   const endCaption = geometry.caption;
   caption.style.fontSize = mix(18, endCaption.fontSize) + 'px';
   caption.style.lineHeight = mix(22, parseFloat(endCaption.lineHeight)) + 'px';
-  caption.style.letterSpacing = mix(-.5, parseFloat(endCaption.letterSpacing)) + 'px';
+  caption.style.letterSpacing = mix(-.4, parseFloat(endCaption.letterSpacing)) + 'px';
   caption.style.gap = mix(12, endCaption.gap) + 'px';
   captionText.style.transform = '';
   captionText.style.marginTop = '0';

@@ -25,8 +25,8 @@ export function measureScene({ stage, intro, mosaic, portraitSlot }) {
   return { w, h, mobile, col, startW, startH, startX, startY, endW, endX, endY, endH,
     socialY: endY + endH + gap,
     caption: mobile
-      ? { fontSize: 18, lineHeight: '22px', letterSpacing: '-0.5px', bottom: 24, left: 24, right: 24, gap: 12 }
-      : { fontSize: 36, lineHeight: '40px', letterSpacing: '-1.5px', bottom: 40, left: 40, right: 40, gap: 16 },
+      ? { fontSize: 18, lineHeight: '22px', letterSpacing: '-0.4px', bottom: 24, left: 24, right: 24, gap: 12 }
+      : { fontSize: 36, lineHeight: '40px', letterSpacing: '-1.3px', bottom: 40, left: 40, right: 40, gap: 16 },
     logoSize: mobile ? 32 : 72 };
 }
 
