@@ -1,898 +1,173 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./pages/index.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#f15a23">
-  <meta name="msapplication-TileColor" content="#f15a23">
-  <meta name="theme-color" content="#ffffff">
-  <title>Designer Myachkov Ruslan</title>
-  <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-  (function (d, w, c) {
-      (w[c] = w[c] || []).push(function() {
-          try {
-              w.yaCounter92772679 = new Ya.Metrika({
-                  id:92772679,
-                  clickmap:true,
-                  trackLinks:true,
-                  accurateTrackBounce:true,
-                  webvisor:true
-              });
-          } catch(e) { }
-      });
-
-      var n = d.getElementsByTagName("script")[0],
-          x = "https://mc.yandex.ru/metrika/watch.js",
-          s = d.createElement("script"),
-          f = function () { n.parentNode.insertBefore(s, n); };
-      for (var i = 0; i < document.scripts.length; i++) {
-          if (document.scripts[i].src === x) { return; }
-      }
-      s.type = "text/javascript";
-      s.async = true;
-      s.src = x;
-
-      if (w.opera == "[object Opera]") {
-          d.addEventListener("DOMContentLoaded", f, false);
-      } else { f(); }
-  })(document, window, "yandex_metrika_callbacks");
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/92772679" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+  <meta charset="utf-8">
+  <script>
+    window.portfolioLanguage = new URLSearchParams(location.search).get('lang') === 'ru' ? 'ru' : 'en';
+    document.documentElement.lang = window.portfolioLanguage;
+  </script>
+  <script type="module" src="language.mjs?v=7"></script>
+  <link rel="stylesheet" href="language.css?v=5">
+  <meta name="pinterest" content="nopin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f9f9fa">
+  <meta name="description" content="Ruslan Myachkov — lead product designer.">
+  <title>Ruslan Myachkov — GSAP test</title>
+  <link rel="icon" href="assets/e7b41.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/optimized/Qanelas-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css?v=tilt-7">
+  <link rel="stylesheet" href="components.css?v=skills-height-2">
+  <link rel="stylesheet" href="experiments/gsap/scene.css?v=resize-fix-1">
+  <script defer src="media-compat.js?v=1"></script>
+  <script src="experiments/vendor/gsap-3.15.0.min.js"></script>
+  <script src="experiments/vendor/ScrollTrigger-3.15.0.min.js"></script>
+  <script type="module" src="experiments/gsap/app.js?v=viewport-3"></script>
+  <link rel="stylesheet" href="next-section.css?v=50">
+  <link rel="stylesheet" href="case-study.css?v=8">
+  <script type="module" src="next-section.mjs?v=64"></script>
+  <script type="module" src="scroll-time.mjs?v=5"></script>
+  <link rel="stylesheet" href="works.css?v=16">
+  <script type="module" src="works.mjs?v=21"></script>
+  <link rel="stylesheet" href="experiments/sound/sound.css?v=4">
+  <script type="module" src="experiments/sound/sound.mjs?v=18"></script>
+  <script type="module" src="language-toggle.mjs?v=6"></script>
 </head>
-<body class="root">
-  <main class="grid">
-    <section class="content home" id="sectionHome">
-      <div class="home__name" id="homeName">
-        <p class="home__title home__title_orange" id="title__ruslan">ruslan</p>
-        <div class="home__rectangle home__rectangle_orange"></div>
-      </div>
-      <div class="home__inst" id="homeInst">
-        <a href="#" class="home__title home__title_orange" >instagram</a>
-        <div class="home__rectangle home__rectangle_orange"></div>
-      </div>
-      <div class="home__surname" id="homeSurname">
-        <div class="home__rectangle home__rectangle_blue"></div>
-        <p class="home__title home__title_blue" id="title__surname">myachkov</p>
-      </div>
-      <div class="home__mail" id="homeMail">
-        <div class="home__rectangle home__rectangle_blue"></div>
-        <a href="#" class="home__title home__title_blue">mail</a>
-      </div>
-      <div class="home__job" id="homeJob">
-        <p class="home__title home__title_yellow" id="title__job">designer</p>
-        <div class="home__rectangle home__rectangle_yellow"></div>
-      </div>
-      <div class="home__tg" id="homeTg">
-        <a href="#" class="home__title home__title_yellow">telegram</a>
-        <div class="home__rectangle home__rectangle_yellow"></div>
-      </div>
-      <div class="home__dscr" id="homeDscr">
-        <div class="home__rectangle home__rectangle_green"></div>
-        <p class="home__dscr__text" id="title__dscr">User Interface Lover, <br />Photographer</p>
-      </div>
-      <div class="home__linkedin" id="homeLinkedin">
-        <div class="home__rectangle home__rectangle_green"></div>
-        <a class="home__title home__title_green" id="title__linkedin" href="https://www.linkedin.com/in/ruslan-myachkov-703319bb/" target="_blank">linkedin</a>
-      </div>
-      <div class="home__pinterest" id="homePinterest">
-        <a href="https://ru.pinterest.com/myachkov/" target="_blank" class="home__title home__title_red" id="title__pinterest">pinterest</a>
-        <div class="home__rectangle home__rectangle_red"></div>
-      </div>
-    </section>
-    <section class="content works" id="sectionWorks">
-      <div class="works__grid_two">
-        <img alt="" class="works__card" data-src="https://www.dropbox.com/s/yuyqxn2i8watf6p/03.webp?raw=1" src="images/placeholder/Mobile.png">
-        <img alt="" class="works__card" data-src="https://www.dropbox.com/s/kei8fb6kfura14l/04.webp?raw=1" src="images/placeholder/Mobile.png">
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/7cxc64tjz4r6jyy/01.webp?raw=1" src="images/placeholder/02.webp"/>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card works__card_165" data-src="https://www.dropbox.com/s/l11pj7zf2efoq6a/01.webp?raw=1" src="images/placeholder/Mobile.png"/>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/qtho5nh58cverjd/05.webp?raw=1" src="images/placeholder/05.webp"/>
-      </div>
-      <div class="works__grid_two">
-        <img class="works__card"  data-src="https://www.dropbox.com/s/3sjl6sxid01adu1/06.webp?raw=1" src="images/placeholder/Mobile.png"/>
-        <img class="works__card" data-src="https://www.dropbox.com/s/8d8em38g3msz1so/07.webp?raw=1" src="images/placeholder/Mobile.png"/>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card works__card_150" data-src="https://www.dropbox.com/s/tqlwsmv8aax65ww/08.webp?raw=1" src="images/placeholder/08.webp"/>
-      </div>
-      <div class="works__grid_two">
-        <img class="works__card"  data-src="https://www.dropbox.com/s/t2injrs0vjmu1vf/09.webp?raw=1"></img>
-        <img class="works__card" data-src="https://www.dropbox.com/s/k1seq2p0bmv5ur2/10.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card works__card_165" data-src="https://www.dropbox.com/s/i77795k3bauftoz/01.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/f1p9wq6oagetkjn/11.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card works__card_165" data-src="https://www.dropbox.com/s/jjh7i88wilc5d1c/03.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/sb3u8eymkyzdeu5/12.webp?raw=1"></img>
-      </div>
-      <div class="works__grid_two">
-        <img class="works__card" data-src="https://www.dropbox.com/s/q0nhl81en5rcix0/13.webp?raw=1"></img>
-        <img class="works__card" data-src="https://www.dropbox.com/s/l93vqoyagbjem61/14.webp?raw=1"></img>
-      </div>
-      <div class="works__grid_two">
-        <img class="works__card" data-src="https://www.dropbox.com/s/zn75b4mjbctkr3d/15.webp?raw=1"></img>
-        <img class="works__card" data-src="https://www.dropbox.com/s/7tpday8rul22bhp/16.webp?raw=1"></img>
-      </div>
-      <video class="lazy" width='100%' autoplay='true' playsinline='' loop='true' muted='true\' poster="images/placeholder/video-auto-cons.webp">
-        <source data-src='https://www.dropbox.com/s/0k2fjtip85nadbs/%D0%A1onsultation-Auto%201.mp4?raw=1' type='video/mp4'>
-      </video>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card works__card_150" data-src="https://www.dropbox.com/s/5ct1zgeoeqacv01/17.webp?raw=1"></img>
-      </div>
-      <div class="works__grid_two">
-        <img class="works__card" data-src="https://www.dropbox.com/s/ja040ybvhyhrvzl/18.webp?raw=1"></img>
-        <img class="works__card" data-src="https://www.dropbox.com/s/icto5l8qxsw994b/19.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card works__card_165" data-src="https://www.dropbox.com/s/lndq7ghjakyli7o/06.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/woj6pe7iozoax6v/20.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card works__card_150" data-src="https://www.dropbox.com/s/wpwlghqgc89sofe/21.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/w1r82tn907044qs/22.webp?raw=1"></img>
-      </div>
-      <div class="works__grid_two">
-        <img class="works__card" data-src="https://www.dropbox.com/s/h1m3fvqspzi0836/23.webp?raw=1"></img>
-        <img class="works__card" data-src="https://www.dropbox.com/s/f7hfbk22qn5ox97/24.webp?raw=1"></img>
-      </div>
-      <div class="works__grid_two">
-        <img class="works__card" data-src="https://www.dropbox.com/s/7pb7tve9ppqzcl0/26.webp?raw=1"></img>
-        <img class="works__card" data-src="https://www.dropbox.com/s/mzj7kc8e0wxemds/27.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/ct56mwn0npyfday/28.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/z2fntx9hve4e014/29.webp?raw=1"></img>
-      </div>
-      <div class="works__grid_two">
-        <img class="works__card" data-src="https://www.dropbox.com/s/d2ya01vhbxe8nue/30.webp?raw=1"></img>
-        <img class="works__card" data-src="https://www.dropbox.com/s/ksemo54ic2fxuzk/31.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/5855ys2vri6jbkj/32.webp?raw=1"></img>
-      </div>
-      <div class="works__grid_two">
-        <img class="works__card" data-src="https://www.dropbox.com/s/3r6jpk738s9dxim/06.webp?raw=1"></img>
-        <img class="works__card" data-src="https://www.dropbox.com/s/595ixcimd1ols9i/07.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/sw46zmcprkgfyz0/33.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card works__card_165" data-src="https://www.dropbox.com/s/tqppl8luekfzdcj/34.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/ubu0st6zl3dk577/04.webp?raw=1"></img>
-      </div>
-      <div class="works__grid_two">
-        <img class="works__card" data-src="https://www.dropbox.com/s/33fy7qnc97qiqms/35.webp?raw=1"></img>
-        <img class="works__card" data-src="https://www.dropbox.com/s/3vszjw3t6prb25i/36.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/m25wqih8viyzdfn/37.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/gilnj3ffi53o7tw/07.webp?raw=1"></img>
-      </div>
-      <div class="works__grid_two">
-        <img class="works__card" data-src="https://www.dropbox.com/s/0s1ifuzcwmr3t3a/38.webp?raw=1"></img>
-        <img class="works__card" data-src="https://www.dropbox.com/s/78xvenxt8yiitx9/39.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/3aqft0isvf4ue6d/41.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card works__card_165" data-src="https://www.dropbox.com/s/wzup5picn86pigx/08.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/lur3cg02zvto7hi/11.webp?raw=1"></img>
-      </div>
-      <div class="works__grid_two">
-        <img class="works__card" data-src="https://www.dropbox.com/s/ftc1ku99ecfxn1p/42.webp?raw=1"></img>
-        <img class="works__card" data-src="https://www.dropbox.com/s/yqpg4kkid5nztog/43.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/0rjo9ttxjihni0f/02.webp?raw=1"></img>
-      </div>
-      <div class="works__grid_two">
-        <img class="works__card" data-src="https://www.dropbox.com/s/pu6aa7h6405is6h/02.webp?raw=1"></img>
-        <img class="works__card" data-src="https://www.dropbox.com/s/ue7es7kiper7wkx/03.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/7iziw3jk6gyiksa/12.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/vrt58nhxjm3pa15/44.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card works__card_100" data-src="https://www.dropbox.com/s/mxo2zaapj03hx2j/45.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/1h7mj63k7dolzia/46.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/88hfch5ic7qds3y/12.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card works__card_100" data-src="https://www.dropbox.com/s/pmu0hzqrwey4q3b/13.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/7upc10ouyyod1nd/47.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/yod8rg6bkrm7nxj/03.webp?raw=1"></img>
-      </div>
-      <video class="lazy" width='100%' autoplay='true' playsinline='' loop='true' muted='true\' poster="images/placeholder/SM-Onboarding.webp">
-        <source data-src='https://www.dropbox.com/s/77d316ivofuexz1/Onboarding.mp4?raw=1' type='video/mp4'>
-      </video>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card works__card_150" data-src="https://www.dropbox.com/s/ljjfalpuieby9fc/50.webp?raw=1"></img>
-      </div>
-      <div class="works__grid_two">
-        <img class="works__card" data-src="https://www.dropbox.com/s/7qcbwc0rxuem3rw/51.webp?raw=1"></img>
-        <img class="works__card" data-src="https://www.dropbox.com/s/uu124zf8jybmxy2/52.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/ff23u9hpzj8q269/53.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/vr0ntqqrrp94cvf/54.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/pxe9midf0vdns56/09.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/s0sbol0lk0852r2/55.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card works__card_165" data-src="https://www.dropbox.com/s/5pawvzbf14fx8o4/56.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/6hjohr2qk9t1ykq/58.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card works__card_100" data-src="https://www.dropbox.com/s/2z73iwebrvyfewh/10.webp?raw=1"></img>
-      </div>
-      <video class="lazy" width='100%' autoplay='true' playsinline='' loop='true' muted='true\' poster="images/placeholder/SM-PhotoCheck.webp" >
-        <source data-src='https://www.dropbox.com/s/eq1dxxbqvd83d7h/Photo%20Check.mp4?raw=1' type='video/mp4'>
-      </video>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/8axjbe39rsbz0cs/62.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/gtkqun7azfgqkwe/63.webp?raw=1"></img>
-      </div>
-      <div class="works__grid_two">
-        <img class="works__card" data-src="https://www.dropbox.com/s/1f0okzsdrmrusub/08.webp?raw=1"></img>
-        <img class="works__card" data-src="https://www.dropbox.com/s/54bati10oba4y4s/09.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/6yr6x4kv7414a9b/64.webp?raw=1"></img>
-      </div>
-      <div class="works__grid_two">
-        <img class="works__card" data-src="https://www.dropbox.com/s/ll9sq7btgzfb98r/65.webp?raw=1"></img>
-        <img class="works__card" data-src="https://www.dropbox.com/s/6itl7ie59cmond2/66.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/xo9b1dc52fzb63w/67.webp?raw=1"></img>
-      </div>
-      <div class="works__grid_two">
-        <img class="works__card" data-src="https://www.dropbox.com/s/7wexzev21ivfrb5/04.webp?raw=1"></img>
-        <img class="works__card" data-src="https://www.dropbox.com/s/r46qqvbfq97i9uv/05.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/5kkxngqdscbgjl7/68.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card works__card_165" data-src="https://www.dropbox.com/s/hxtf177uamupvor/02.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/82tkgn7pp3mrsop/69.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/2mf2nbl987pyncz/05.webp?raw=1"></img>
-      </div>
-      <div class="works__grid_two">
-        <img class="works__card" data-src="https://www.dropbox.com/s/w984470kw28y0en/70.webp?raw=1"></img>
-        <img class="works__card" data-src="https://www.dropbox.com/s/0sctkgscoogx1s4/71.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card works__card_100" data-src="https://www.dropbox.com/s/znikvsblu06sgj8/72.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/4iz946frhiw8qxt/73.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/a6hmhob33o0expg/74.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card works__card_100" data-src="https://www.dropbox.com/s/x8srvygf6yjc89i/02.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/r01mggntgt2766p/11.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/gvgum1vexsgquko/75.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/ehqo2l33mpapgk6/08.webp?raw=1"></img>
-      </div>
-      <div class="works__grid_two">
-        <img class="works__card" data-src="https://www.dropbox.com/s/z483rczs709xx8p/76.webp?raw=1"></img>
-        <img class="works__card" data-src="https://www.dropbox.com/s/txgbhpqt4hg9v7q/77.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/qmumqlcej087a3r/78.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/ic74gp2oyp32sma/03.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/kr3lxud50hqeazb/05.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/qxubcmw399l0oj5/14.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/d4aztxgjua2j13h/80.webp?raw=1"></img>
-      </div>
-      <div class="works__grid" id="works__grid">
-        <img class="works__card" data-src="https://www.dropbox.com/s/dcpbgul9lv6nc0g/81.webp?raw=1"></img>
-      </div>
-    </section>
-    <section class="projects" id="sectionProjects">
-      <div class="projects__grid" id="projects__grid">
-        <div class="project__card project__card_nda" id="project__card-sm">
-          <img src="images/projects/covers/NDA.webp" alt="" class="project__cover_nohover">
-          <p class="project__text">NDA,<br/><span class="project__text_span">2023, Soon</span> </p>
-        </div>
-        <div class="project__card project__card_flow-one" id="project__card-sm">
-          <img src="images/projects/covers/flowone.png" alt="" class="project__cover_nohover">
-          <p class="project__text">Flow-One,<br/><span class="project__text_span">2023, Soon</span> </p>
-        </div>
-        <div onclick="showProject('project__samoosmotr')" class="project__card project__card_samoosmotr" id="project__card-sm">
-          <video class="project__cover lazy" width='100%' autoplay='true' playsinline='' loop='true' muted='true\' poster="images/placeholder/SM-SamoosmotrCover.webp">
-            <source data-src='https://www.dropbox.com/s/uz5f1ymajkabull/samoosmotr_compressed.mp4?raw=1' type='video/mp4'>
-          </video>
-          <p class="project__text">NDA Client,<br/><span class="project__text_span">Product Design, 2022</span> </p>
-        </div>
-        <div onclick="showProject('project__first')" class="project__card project__card_first" id="project__card-sm">
-          <img src="images/projects/covers/first.webp" alt="" class="project__cover">
-          <p class="project__text">First,<br/><span class="project__text_span">Identity, Website, 2022</span> </p>
-        </div>
-        <div onclick="showProject('project__dom')" class="project__card project__card_dom" id="project__card-sm">
-          <video class="project__cover lazy" width='100%' autoplay='true' playsinline='' loop='true' muted='true\' poster="images/placeholder/dom-cover.webp">
-            <source data-src='https://www.dropbox.com/s/vp1lossmt7j7zoe/dom.mp4?raw=1' type='video/mp4'>
-          </video>
-          <p class="project__text">Moi Servis Home,<br/><span class="project__text_span">Product Design, 2022</span> </p>
-        </div>
-        <div onclick="showProject('project__auto')" class="project__card project__card_auto" id="project__card-sm">
-          <video class="project__cover lazy" width='100%' autoplay='true' playsinline='' loop='true' muted='true\' poster="images/placeholder/auto-cover.webp">
-            <source data-src='https://www.dropbox.com/s/p7pkq5vozzj71on/auto.mp4?raw=1' type='video/mp4'>
-          </video>
-          <p class="project__text">Moi Servis Auto,<br/><span class="project__text_span">Product Design, 2022</span> </p>
-        </div>
-        <div onclick="showProject('project__practicum')" class="project__card project__card_practicum" id="project__card-sm">
-          <img src="images/projects/covers/practicum.webp" alt="" class="project__cover">
-          <p class="project__text">English by Yandex Practicum,<br/><span class="project__text_span">Product Design, 2020-2022</span> </p>
-        </div>
-        <div onclick="showProject('project__teko')" class="project__card project__card_teko" id="project__card-sm">
-          <img src="images/projects/covers/teko.webp" alt="" class="project__cover">
-          <p class="project__text">Teko,<br/><span class="project__text_span">Website, 2021</span> </p>
-        </div>
-        <div onclick="showProject('project__easymusic')" class="project__card project__card_easymusic" id="project__card-sm">
-          <video class="project__cover lazy" width='100%' autoplay='true' playsinline='' loop='true' muted='true\' poster="images/placeholder/easymusic_compressed.webp">
-            <source data-src='https://www.dropbox.com/s/xj8046pbbdzp8ot/easymusic_compressed.mp4?raw=1' type='video/mp4'>
-          </video>
-          <p class="project__text project__text-easymusic">Easymusic,<br/><span class="project__text_span">Identity, Website, 2021</span> </p>
-        </div>
-        <div onclick="showProject('project__afisha')" class="project__card project__card_afisha" id="project__card-sm">
-          <img src="images/projects/covers/afisha.webp" class="project__cover">
-          <p class="project__text project__text-afisha">Afisha,<br/><span class="project__text_span">Concept, 2019</span> </p>
-        </div>
-      </div>
-      <div class="project project__first" id="project__first">
-        <div class="project__start-slide">
-          <img data-src="https://www.dropbox.com/s/5ct1zgeoeqacv01/17.webp?raw=1" class="project__start-image">
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/sb3u8eymkyzdeu5/12.webp?raw=1"></img>
-        </div>
-        <div class="works__grid_two">
-          <img class="works__card" data-src="https://www.dropbox.com/s/3sjl6sxid01adu1/06.webp?raw=1"></img>
-          <img class="works__card" data-src="https://www.dropbox.com/s/8d8em38g3msz1so/07.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card works__card_165" data-src="https://www.dropbox.com/s/i77795k3bauftoz/01.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/sw46zmcprkgfyz0/33.webp?raw=1"></img>
-        </div>
-        <div class="works__grid_two">
-          <img class="works__card" data-src="https://www.dropbox.com/s/7qcbwc0rxuem3rw/51.webp?raw=1"></img>
-          <img class="works__card" data-src="https://www.dropbox.com/s/uu124zf8jybmxy2/52.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/0rjo9ttxjihni0f/02.webp?raw=1"></img>
-        </div>
-        <div class="works__grid_two">
-          <img class="works__card" data-src="https://www.dropbox.com/s/7wexzev21ivfrb5/04.webp?raw=1"></img>
-          <img class="works__card" data-src="https://www.dropbox.com/s/r46qqvbfq97i9uv/05.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/ic74gp2oyp32sma/03.webp?raw=1"></img>
-        </div>
-        <div class="project__slide-text">
-          <p>The brand wanted to get a new packaging design to make it appropriate for the product level. Undoubtedly, the main character of the packaging was the font and the variability of its use in combination with bright colors. The box from MONOCHROME has turned in an enviable trophy with a pleasant memory of the purchase, which I want to return to. The design of branded bags for products is made in such a way that divides the package into two parts: the first is basic white, and the second, transparent, uses the bright color of the products themselves as an accent. Additional materials — tags, liners of composition and care, packages in the offline store — all of them are united by the font.</p>
-        </div>
-      </div>
-      <div class="project project__samoosmotr" id="project__samoosmotr">
-        <video class="lazy" class="project__video" width='100%' autoplay='true' playsinline='' loop='true' muted='true\' poster="images/placeholder/SM-SamoosmotrCover.webp">
-          <source data-src='https://www.dropbox.com/s/igvlckpq49czxwc/samoosmotr.mp4?raw=1' type='video/mp4'>
-        </video>
-        <div class="project__slide-text">
-          <p>To pass self-examination after an accident, you no longer need to go and call the Rosgosstrakh office. You just need to open the app and take photos.</p>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/s77ml7hmh2bq978/01.webp?raw=1" src="images/placeholder/sm-img-first.png"></img>
-        </div>
-        <video class="lazy" width='100%' autoplay='true' playsinline='' loop='true' muted='true\' poster="images/placeholder/SM-Onboarding.webp">
-          <source data-src='https://www.dropbox.com/s/77d316ivofuexz1/Onboarding.mp4?raw=1' type='video/mp4'>
-        </video>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/zmbg82gm42p32qv/02.webp?raw=1"></img>
-        </div>
-        <div class="works__grid_two">
-          <img class="works__card" data-src="https://www.dropbox.com/s/ftc1ku99ecfxn1p/42.webp?raw=1"></img>
-          <img class="works__card" data-src="https://www.dropbox.com/s/yqpg4kkid5nztog/43.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/3e6kgb56l51a942/03.webp?raw=1"></img>
-        </div>
-        <div class="works__grid_two">
-          <img class="works__card" data-src="https://www.dropbox.com/s/7pb7tve9ppqzcl0/26.webp?raw=1"></img>
-          <img class="works__card" data-src="https://www.dropbox.com/s/mzj7kc8e0wxemds/27.webp?raw=1"></img>
-        </div>
-        <video class="lazy" width='100%' autoplay='true' playsinline='' loop='true' muted='true\' poster="images/placeholder/Cards.webp">
-          <source data-src='https://www.dropbox.com/s/p42ecr7le2o1m3j/Cards.mp4?raw=1' type='video/mp4'>
-        </video>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/77yznih2mksovae/04.webp?raw=1"></img>
-        </div>
-        <video class="lazy" width='100%' autoplay='true' playsinline='' loop='true' muted='true\' poster="images/placeholder/SM-PhotoCheck.webp">
-          <source data-src='https://www.dropbox.com/s/eq1dxxbqvd83d7h/Photo%20Check.mp4?raw=1' type='video/mp4'>
-        </video>
-        <div class="works__grid_two">
-          <img class="works__card" data-src="https://www.dropbox.com/s/w984470kw28y0en/70.webp?raw=1"></img>
-          <img class="works__card" data-src="https://www.dropbox.com/s/0sctkgscoogx1s4/71.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/kr3lxud50hqeazb/05.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/82tkgn7pp3mrsop/69.webp?raw=1"></img>
-        </div>
-        <div class="works__grid_two">
-          <img class="works__card" data-src="https://www.dropbox.com/s/z483rczs709xx8p/76.webp?raw=1"></img>
-          <img class="works__card" data-src="https://www.dropbox.com/s/txgbhpqt4hg9v7q/77.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/f4i6mfuufdj6c97/06.webp?raw=1"></img>
-        </div>
-        <video class="lazy" width='100%' autoplay='true' playsinline='' loop='true' muted='true\' poster="images/placeholder/Wheel Photo.webp">
-          <source data-src='https://www.dropbox.com/s/ufg601pxrn3h7o8/Wheel%20Photo.mp4?raw=1' type='video/mp4'>
-        </video>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/kjpquf4b0zfzz0f/07.webp?raw=1"></img>
-        </div>
-        <div class="works__grid_two">
-          <img class="works__card" data-src="https://www.dropbox.com/s/98rvn8ziwyw9eau/08.webp?raw=1"></img>
-          <img class="works__card" data-src="https://www.dropbox.com/s/1ng52pcd0b0hm88/09.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/8711zoyjx42u8tu/10.webp?raw=1"></img>
-        </div>
-      </div>
-      <div class="project project__dom" id="project__dom">
-        <video class="lazy" class="project__video" width='100%' autoplay='true' playsinline='' loop='true' muted='true\' poster="images/placeholder/dom-cover.webp">
-          <source data-src='https://www.dropbox.com/s/vp1lossmt7j7zoe/dom.mp4?raw=1' type='video/mp4'>
-        </video>
-        <div class="project__slide-text">
-          <p>All household services are available in one place: video conference with an electrician or a plumber, repair works maintenance, laundry or cleaning, even gardening</p>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/d4aztxgjua2j13h/80.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/xo9b1dc52fzb63w/67.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/dcpbgul9lv6nc0g/81.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/mmni3s58z6vvcqb/01.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/3a7wsi7o4odidk9/02.webp?raw=1"></img>
-        </div>
-        <video class="lazy" width='100%' autoplay='true' playsinline='' loop='true' muted='true\' poster="images/placeholder/Cards-Products-Dom.webp">
-          <source data-src='https://www.dropbox.com/s/w23etkh6nhucsws/Cards-Products-Dom.mp4?raw=1' type='video/mp4'>
-        </video>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/gxg4895r18jhesz/03.webp?raw=1"></img>
-        </div>
-        <video class="lazy" width='100%' autoplay='true' playsinline='' loop='true' muted='true\' poster="images/placeholder/Online-Master-Dom.webp">
-          <source data-src='https://www.dropbox.com/s/7b13pwfvlv9ii70/Online-Master-Dom.mp4?raw=1' type='video/mp4'>
-        </video>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/f3adcsb894oiezp/04.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card works__card_165" data-src="https://www.dropbox.com/s/zmnl8xz9lkmhq6a/05.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/5yial0dbq0a69vy/06.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/5cseblm7c7wm1o9/07.webp?raw=1"></img>
-        </div>
-        <div class="works__grid_two">
-          <img class="works__card" data-src="https://www.dropbox.com/s/1f0okzsdrmrusub/08.webp?raw=1"></img>
-          <img class="works__card" data-src="https://www.dropbox.com/s/54bati10oba4y4s/09.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/ilnyzixgjyhchf7/10.webp?raw=1"></img>
-        </div>
-        <div class="project__slide-text">
-          <p>RGS is an insurance company with 12.9 million customers. In 2020 it has decided to expand its services and launch startups under the brand My_Service — Dom, Med, Auto. My_Service Dom helps to deal with household issues: change or repair bathroom facilities and electricity, schedule annual control of utility systems throughout, control the repair works and order cleaning services. From 2021 to 2022 we were managing the product design, research and brand development. Dom and Auto are made within one design-system. There is a catalogue of over 100 services inside each project. Neither of the services may be announced as priority ones since each of them is popular among the users. Search button has become the central object on the page. The colour differentiation has simplified the searching and completes the navigation. In case of an urgent matter there is an online master available 24/7. It’s a specialist with knowledge and skills of an electrician, a plumber and a locksmith. He can help to deal with the problem or order a service needed. Afterwards he can also inform how to avoid malfunctions in the future. After JTBD-research we divided all the services into urgent and non-urgent. For the urgent ones we tried to make business processes more beneficial for the customer. For example, to eliminate the pipe leak using video conference with a plumber and only after proceeding with the payment. In case something important has broken down or gone out of control, a person seeks a fast solution and tries to find his problem among hundreds of services. The graphic reading speed must be high to meet that expectation. Graphics detailing aims to be realistic yet with little simplifications to avoid excessive noise within small forms where an object is perceived as an icon</p>
-        </div>
-      </div>
-      <div class="project project__auto" id="project__auto">
-        <video class="lazy" class="project__video" width='100%' autoplay='true' playsinline='' loop='true' muted='true\' poster="images/placeholder/auto-cover.webp">
-          <source data-src='https://www.dropbox.com/s/p7pkq5vozzj71on/auto.mp4?raw=1' type='video/mp4'>
-        </video>
-        <div class="project__slide-text">
-          <p>All the auto services are available in one place: video conference with a car mechanic, towing service, repair maintenance, seasonal service, assistance with a car sale or purchase</p>
-        </div>
-        <div class="works__grid_two">
-          <img class="works__card" data-src="https://www.dropbox.com/s/ydw1qyuaih8h716/01.webp?raw=1" src="images/placeholder/Mobile.png"></img>
-          <img class="works__card" data-src="https://www.dropbox.com/s/48nmstpiyq9zh1i/02.webp?raw=1" src="images/placeholder/Mobile.png"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/yod8rg6bkrm7nxj/03.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card works__card-nopadding" data-src="https://www.dropbox.com/s/v0qhu9uqe37pue1/04.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card works__card-nopadding" data-src="https://www.dropbox.com/s/s0sxe92hkofrmca/05.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card works__card_125" data-src="https://www.dropbox.com/s/lnx33lwqd4ju4g6/06.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/c8i4k5dlkdfyku1/07.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/z7vexrp6lsnuxt3/08.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card works__card-nopadding" data-src="https://www.dropbox.com/s/z9lg6guic2vvdu6/09.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/sykhnl1jto6f7eg/10.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/r01mggntgt2766p/11.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/79k6a6w0mjl5zib/12.webp?raw=1"></img>
-        </div>
-        <video class="lazy" width='100%' autoplay='true' playsinline='' loop='true' muted='true\' poster="images/placeholder/video-auto-cons.webp">
-          <source data-src='https://www.dropbox.com/s/0k2fjtip85nadbs/%D0%A1onsultation-Auto%201.mp4?raw=1' type='video/mp4'>
-        </video>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/4kuhrjcw5lgg34b/13.webp?raw=1"></img>
-        </div>
-        <div class="project__slide-text">
-          <p>RGS is an insurance company with 12.9 million customers. In 2020 it has decided to expand its services and launch startups under the brand My_Service — Auto, Dom, Med. My_Service Auto takes care of a car or a motorcycle: technical or legal consultations, repair works maintenance, evacuation, seasonal service, assistance with a car sale or purchase. From 2021 to 2022 we were managing the product design, research and brand development. Auto and Dom are made within one design-system. There is a catalogue of over 100 services inside each project. Neither of the services may be announced as priority ones since each of them is popular among the users. Search button has become the central object on the page. The colour differentiation has simplified the searching and completes the navigation. In case of an urgent matter, an auto consultant (an online specialist with a car mechanic experience) is available 24/7. He can help to deal with the problem and order a necessary service. Legal and technical consultants will provide support after accidents and car repair. After JTBD-research we divided all the services into urgent and non-urgent. For the urgent ones we tried to make business processes more beneficial for the customer. For example, first order a tow truck and then, during the waiting, deal with the service payment. In case something important has broken down or gone out of control, a person seeks a fast solution and tries to find his problem among hundreds of services. The graphic reading speed must be high to meet that expectation. Graphics detailing aims to be realistic yet with little simplifications to avoid “excessive noise” within small forms where an object is perceived as an icon.</p>
-        </div>
-      </div>
-      <div class="project project__practicum" id="project__practicum">
-        <div class="project__start-slide">
-          <img data-src="https://www.dropbox.com/s/9iwp4j5fpmoaagf/0.webp?raw=1" class="project__start-image">
-        </div>
-        <div class="project__slide-text">
-          <p>Yandex Practicum helps people to acquire new professions and skills with the help of technology and a modern approach and a large amount of practice.</p>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card works__card_85" data-src="https://www.dropbox.com/s/ggmn0lkwul287fa/01.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/vrt58nhxjm3pa15/44.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card works__card_100" data-src="https://www.dropbox.com/s/x8srvygf6yjc89i/02.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/8axjbe39rsbz0cs/62.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/5kkxngqdscbgjl7/68.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card works__card_165" data-src="https://www.dropbox.com/s/jjh7i88wilc5d1c/03.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/ubu0st6zl3dk577/04.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card works__card_100" data-src="https://www.dropbox.com/s/znikvsblu06sgj8/72.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/s79km4pc52se6q6/05.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/4iz946frhiw8qxt/73.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/qmumqlcej087a3r/78.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card works__card_165" data-src="https://www.dropbox.com/s/lndq7ghjakyli7o/06.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/gilnj3ffi53o7tw/07.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/ehqo2l33mpapgk6/08.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/pxe9midf0vdns56/09.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card works__card_100" data-src="https://www.dropbox.com/s/2z73iwebrvyfewh/10.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/lur3cg02zvto7hi/11.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/88hfch5ic7qds3y/12.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card works__card_100" data-src="https://www.dropbox.com/s/pmu0hzqrwey4q3b/13.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/qxubcmw399l0oj5/14.webp?raw=1"></img>
-        </div>
-        <div class="project__slide-text">
-          <p>Yandex Practicum is a large company with many directions. I was responsible for the direction of the English language. Our design team has been developing and improving the platform. Together with a team of experts, we tried to make learning English interesting and unusual. We were looking to find new, non-boring approaches to learning. The product was in search of product-market-fit, so most often we were looking for new hypotheses and did a lot of experiments. Learning a language is a difficult process for a person and it was most difficult to work with the motivation of a student to overcome the language barrier and laziness. We tried to make a clean, pleasant and emotional product. Many users noted how the product communicated with students, we spent a lot of time writing texts and motivating students to continue learning. Our product has become one of the benchmarks in English language learning and many product approaches have been copied by our competitors.</p>
-        </div>
-      </div>
-      <div class="project project__teko" id="project__teko">
-        <div class="project__start-slide">
-          <img data-src="https://www.dropbox.com/s/04n1y9702yafiz7/0.webp?raw=1" class="project__start-image">
-        </div>
-        <div class="project__slide-text">
-          <p>Teko is a marketplace of applications for business that helps its customers sell effectively online and offline.</p>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/1h7mj63k7dolzia/46.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/woj6pe7iozoax6v/20.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card works__card_165" data-src="https://www.dropbox.com/s/hxtf177uamupvor/02.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/5pcg19tzi15ftzz/03.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/spto4zjmwutvi1a/04.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/2mf2nbl987pyncz/05.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/y2kqfaeh62j20nn/06.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/ff23u9hpzj8q269/53.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/trduod7l0qtvleh/07.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card works__card_165" data-src="https://www.dropbox.com/s/wzup5picn86pigx/08.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/s0sbol0lk0852r2/55.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/2fy2enaj3cquuw8/10.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/7iziw3jk6gyiksa/12.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/ztrp6rufzggjt5f/11.webp?raw=1"></img>
-        </div>
-        <div class="project__slide-text">
-          <p>I helped the business to bring together all its services, turn them into products that will be understandable to the client and show them on the company's website. Teko works in different directions, from selling products on marketplaces to warehouse inventory accounting and organizing points of sale for cashiers. We chose modular system that allows the company to present clearly current products, as well as design new landing pages for new and future services. The client was so inspired by the style of the new website so that they began to use it immediately in their internal interfaces and products.</p>
-        </div>
-      </div>
-      <div class="project project__easymusic" id="project__easymusic">
-        <div class="project__start-slide">
-          <img data-src="https://www.dropbox.com/s/vfwbkrxz6rtihki/0.webp?raw=1" class="project__start-image">
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/qtho5nh58cverjd/05.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/f1p9wq6oagetkjn/11.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/7cxc64tjz4r6jyy/01.webp?raw=1"></img>
-        </div>
-        <div class="works__grid_two">
-          <img class="works__card" data-src="https://www.dropbox.com/s/pu6aa7h6405is6h/02.webp?raw=1"></img>
-          <img class="works__card" data-src="https://www.dropbox.com/s/ue7es7kiper7wkx/03.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/22f4v65n95wgxmu/04.webp?raw=1"></img>
-        </div>
-        <div class="works__grid_two">
-          <img class="works__card" data-src="https://www.dropbox.com/s/3r6jpk738s9dxim/06.webp?raw=1"></img>
-          <img class="works__card" data-src="https://www.dropbox.com/s/595ixcimd1ols9i/07.webp?raw=1"></img>
-        </div>
-      </div>
-      <div class="project project__afisha" id="project__afisha">
-        <div class="project__start-slide">
-          <img data-src="https://www.dropbox.com/s/24g1whnbau7ehpy/0.webp?raw=1" src="images/placeholder/afisha-1.webp" class="project__start-image">
-        </div>
-        <div class="works__grid_two">
-          <img class="works__card" data-src="https://www.dropbox.com/s/yuyqxn2i8watf6p/03.webp?raw=1"></img>
-          <img class="works__card" data-src="https://www.dropbox.com/s/kei8fb6kfura14l/04.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/ct56mwn0npyfday/28.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/m25wqih8viyzdfn/37.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card works__card_100" data-src="https://www.dropbox.com/s/mxo2zaapj03hx2j/45.webp?raw=1"></img>
-        </div>
-        <div class="works__grid_two">
-          <img class="works__card" data-src="https://www.dropbox.com/s/ja040ybvhyhrvzl/18.webp?raw=1"></img>
-          <img class="works__card" data-src="https://www.dropbox.com/s/icto5l8qxsw994b/19.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card" data-src="https://www.dropbox.com/s/3aqft0isvf4ue6d/41.webp?raw=1"></img>
-        </div>
-        <div class="works__grid" id="works__grid">
-          <img class="works__card works__card_165" data-src="https://www.dropbox.com/s/tqppl8luekfzdcj/34.webp?raw=1"></img>
-        </div>
-      </div>
-    </section>
-    <section class="content notes" id="sectionNotes">
-      <div class="notes__title-group">
-        <p class="notes__title" id="notes__title">ruslan is typing...</p>
-        <div class="notes__rectangle"></div>
-      </div>
-      <div class="notes__grid" id="notes_grid">
-        <div class="notes__card">
-          <p class="notes__card-text"><span class="about__text_normal">Think different. </span>I was shocked when I noticed that sometimes I was victim of trivial copypasted solutions. Sometimes I felt lazy to create something new and even think about it. In general too many projects are based on tried and tested solutions and practices. But I always have people who help me look at the problem from all angles. I believe it's the most important thing I learned. Don't waste time, relax and start think different right now.</p>
-          <div class="notes__date">
-            <p class="about__text_normal">Wednesday, 1 February 2023, 12:01</p>
-            <img data-src="https://www.dropbox.com/s/f3rakqb2bb609k0/1.webp?raw=1" src="images/placeholder/notes.webp" class="notes__card-img">
+<body>
+  <a class="language-toggle" hidden>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="9"/>
+      <ellipse cx="12" cy="12" rx="4" ry="9"/>
+      <path d="M3 12h18"/>
+    </svg>
+    <span></span>
+  </a>
+  <main>
+    <section class="intro-runway" aria-label="Introduction">
+      <div class="intro-stage">
+        <div class="mosaic">
+          <div class="column" data-col="0" style="--index:0">
+            <button type="button" class="tile"><picture class="asset-picture"><source type="image/webp" srcset="assets/optimized/929e2.webp"><img draggable="false" nopin="nopin" src="assets/929e2.png" alt="" decoding="async"></picture></button>
+            <button type="button" class="tile"><picture class="asset-picture"><source type="image/webp" srcset="assets/optimized/fc14a.webp"><img draggable="false" nopin="nopin" src="assets/fc14a.png" alt="" decoding="async"></picture></button>
+            <button type="button" class="tile"><picture class="asset-picture"><source type="image/webp" srcset="assets/optimized/268e2-768.webp 768w, assets/optimized/268e2-1536.webp 1536w, assets/optimized/268e2-3072.webp 3072w, assets/optimized/268e2.webp 4096w" sizes="(max-width: 700px) 48vw, 16vw"><img draggable="false" nopin="nopin" src="assets/268e2.png" alt="" decoding="async"></picture></button>
+          </div>
+          <div class="column" data-col="1" style="--index:1">
+            <button type="button" class="tile"><video disablepictureinpicture disableremoteplayback controlslist="nodownload noremoteplayback" loop muted playsinline preload="none" poster="assets/optimized/home-icon-poster.webp" data-poster-fallback="assets/home-icon-poster.png" data-work-id="home-icon" src="assets/optimized/home-icon-preview.mp4"></video></button>
+            <button type="button" class="tile"><picture class="asset-picture"><source type="image/webp" srcset="assets/optimized/7f350.webp"><img draggable="false" nopin="nopin" src="assets/7f350.png" alt="" decoding="async"></picture></button>
+            <button type="button" class="tile"><video disablepictureinpicture disableremoteplayback controlslist="nodownload noremoteplayback" loop muted playsinline preload="none" poster="assets/optimized/poster-travel.webp" data-poster-fallback="assets/poster-travel.png" src="assets/travel-card-figma-export.mp4?v=lossless-1"></video></button>
+          </div>
+          <div class="column" data-col="2" style="--index:2">
+            <button type="button" class="tile"><video disablepictureinpicture disableremoteplayback controlslist="nodownload noremoteplayback" loop muted playsinline preload="none" poster="assets/optimized/poster-office.webp" data-poster-fallback="assets/poster-office.png" src="assets/office-card-short-loop.mp4"></video></button>
+            <button type="button" class="tile"><picture class="asset-picture"><source type="image/webp" srcset="assets/optimized/b547c.webp"><img draggable="false" nopin="nopin" src="assets/b547c.png" alt="" decoding="async"></picture></button>
+            <button type="button" class="tile"><picture class="asset-picture"><source type="image/webp" srcset="assets/optimized/c8b32.webp"><img draggable="false" nopin="nopin" src="assets/c8b32.png" alt="" decoding="async"></picture></button>
+          </div>
+          <div class="column central-column" data-col="3" style="--index:3">
+            <button type="button" class="tile central-top central-primary"><video disablepictureinpicture disableremoteplayback controlslist="nodownload noremoteplayback" loop muted playsinline preload="none" poster="assets/optimized/figma-original-a.webp" data-poster-fallback="assets/figma-original-a.png" src="assets/rgs-download-app.mp4?v=lossless-1"></video></button>
+            <button type="button" class="tile central-top central-secondary"><video disablepictureinpicture disableremoteplayback controlslist="nodownload noremoteplayback" loop muted playsinline preload="none" poster="assets/optimized/auto-icon-poster.webp" data-poster-fallback="assets/auto-icon-poster.png" data-work-id="auto-icon" src="assets/optimized/auto-icon-preview.mp4"></video></button>
+            <div class="portrait-slot" aria-hidden="true"></div>
+            <button class="scroll-hint" type="button" aria-label="Scroll to introduction"><img draggable="false" nopin="nopin" src="assets/b01b3.svg" alt=""></button>
+          </div>
+          <div class="column" data-col="4" style="--index:4">
+            <button type="button" class="tile"><picture class="asset-picture"><source type="image/webp" srcset="assets/optimized/971b8.webp"><img draggable="false" nopin="nopin" src="assets/971b8.png" alt="" decoding="async"></picture></button>
+            <button type="button" class="tile"><picture class="asset-picture"><source type="image/webp" srcset="assets/optimized/778b8.webp"><img draggable="false" nopin="nopin" src="assets/778b8.png" alt="" decoding="async"></picture></button>
+            <button type="button" class="tile"><video disablepictureinpicture disableremoteplayback controlslist="nodownload noremoteplayback" loop muted playsinline preload="none" poster="assets/optimized/portfolio-carousel-poster.webp" data-poster-fallback="assets/portfolio-carousel-poster.png" src="assets/portfolio-carousel.mp4?v=display-2"></video></button>
+          </div>
+          <div class="column" data-col="5" style="--index:5">
+            <button type="button" class="tile"><video disablepictureinpicture disableremoteplayback controlslist="nodownload noremoteplayback" loop muted playsinline preload="none" poster="assets/optimized/health-icon-poster.webp" data-poster-fallback="assets/health-icon-poster.png" data-work-id="health-icon" src="assets/optimized/health-icon-preview.mp4"></video></button>
+            <button type="button" class="tile phone-mockup"><picture class="asset-picture"><source type="image/webp" srcset="assets/optimized/7e86d.webp"><img draggable="false" nopin="nopin" src="assets/7e86d.png" alt="" decoding="async"></picture></button>
+            <button type="button" class="tile"><picture class="asset-picture"><source type="image/webp" srcset="assets/optimized/2e309.webp"><img draggable="false" nopin="nopin" src="assets/2e309.png" alt="" decoding="async"></picture></button>
+          </div>
+          <div class="column" data-col="6" style="--index:6">
+            <button type="button" class="tile"><picture class="asset-picture"><source type="image/webp" srcset="assets/optimized/44d3d.webp"><img draggable="false" nopin="nopin" src="assets/44d3d.png" alt="" decoding="async"></picture></button>
+            <button type="button" class="tile"><picture class="asset-picture"><source type="image/webp" srcset="assets/optimized/bb7e4.webp"><img draggable="false" nopin="nopin" src="assets/bb7e4.png" alt="" decoding="async"></picture></button>
+            <button type="button" class="tile"><picture class="asset-picture"><source type="image/webp" srcset="assets/optimized/bc8e2.webp"><img draggable="false" nopin="nopin" src="assets/bc8e2.png" alt="" decoding="async"></picture></button>
           </div>
         </div>
-        <div class="notes__card">
-          <p class="notes__card-text"><span class="about__text_normal">Interest. </span>From time to time we can lose interest in usual things. Learning languages, finishing tasks or just making daily routine. With time I understood why this happened. We forget to enjoy the process. It’s easy! Just have fun, enjoy, feel the moment.</p>
-          <div class="notes__date">
-            <p class="about__text_normal">Thursday, 9 February 2023, 19:32</p>
-            <img data-src="https://www.dropbox.com/s/8doh5wcyt82jttr/2.webp?raw=1" src="images/placeholder/notes.webp" class="notes__card-img-2">
+        <div class="intro-copy" aria-label="For 10 years, I’ve been doing design: websites, mobile apps, services, and brands. I’ve worked with both early-stage startups and large businesses">
+          <p><span class="muted">For 10 years, </span>I’ve been doing design: websites, mobile apps, services, and brands. I’ve worked with both early‑stage startups and large businesses</p>
+        </div>
+        <div class="portrait">
+          <picture class="asset-picture"><source type="image/webp" srcset="assets/optimized/277a6-640.webp 640w, assets/optimized/277a6-1280.webp 1280w, assets/optimized/277a6.webp 2160w" sizes="(max-width: 660px) max(calc(100vw - 20px), 60vh), max(640px, 60vh)"><img draggable="false" nopin="nopin" class="portrait-photo" fetchpriority="high" src="assets/277a6.png" alt="Ruslan Myachkov by the sea" decoding="async"></picture>
+          <div class="portrait-caption">
+            <img draggable="false" nopin="nopin" src="assets/portrait-logo.svg" alt="" class="monogram">
+            <div><p>I’m Ruslan Myachkov</p><p class="portrait-subtitle">Lead Product Designer</p></div>
           </div>
         </div>
+        <nav class="socials" aria-label="Contact profiles">
+          <a href="mailto:rmyachkov@yandex.ru" aria-label="Email"><img draggable="false" nopin="nopin" src="assets/2c9d6.svg" alt=""></a>
+          <a href="https://www.linkedin.com/in/ruslan-myachkov-703319bb/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><img draggable="false" nopin="nopin" src="assets/f7d25.svg" alt=""></a>
+          <a href="https://t.me/rusmyachkov" aria-label="Telegram" target="_blank" rel="noopener noreferrer"><img draggable="false" nopin="nopin" src="assets/aec9a.svg" alt=""></a>
+          <a href="https://ru.pinterest.com/myachkov/" aria-label="Pinterest" target="_blank" rel="noopener noreferrer"><img draggable="false" nopin="nopin" src="assets/0f50f.svg" alt=""></a>
+        </nav>
       </div>
     </section>
-    <section class="content photos" id="sectionPhotos">
-      <div class="photos__grid">
-        <img src="images/placeholder/Photo.webp" data-src="https://www.dropbox.com/s/9huo6jm4h34bmls/1.webp?raw=1" class="photos__card"></img>
-        <img src="images/placeholder/Photo.webp" data-src="https://www.dropbox.com/s/av7jcoqa4tolnho/2.webp?raw=1" class="photos__card"></img>
-        <img src="images/placeholder/Photo.webp" data-src="https://www.dropbox.com/s/qwpueuxk0a6unda/3.webp?raw=1" class="photos__card"></img>
-        <img src="images/placeholder/Photo.webp" data-src="https://www.dropbox.com/s/fwafvq6py2yfxuw/4.webp?raw=1" class="photos__card"></img>
-        <img src="images/placeholder/Photo.webp" data-src="https://www.dropbox.com/s/c36e1orhyybquc9/5.webp?raw=1" class="photos__card"></img>
-        <img src="images/placeholder/Photo.webp" data-src="https://www.dropbox.com/s/nqii03t9ej9wycb/6.webp?raw=1" class="photos__card"></img>
-        <img src="images/placeholder/Photo.webp" data-src="https://www.dropbox.com/s/46tyyr20nvrl9qj/7.webp?raw=1" class="photos__card"></img>
-        <img src="images/placeholder/Photo.webp" data-src="https://www.dropbox.com/s/0w83xt2z0d2lr2o/8.webp?raw=1" class="photos__card"></img>
-        <img src="images/placeholder/Photo.webp" data-src="https://www.dropbox.com/s/0kyda5wiho4jigs/9.webp?raw=1" class="photos__card"></img>
-        <img src="images/placeholder/Photo.webp" data-src="https://www.dropbox.com/s/0if3n4n68208dr6/10.webp?raw=1" class="photos__card"></img>
-        <img src="images/placeholder/Photo.webp" data-src="https://www.dropbox.com/s/jbhyu3nt5qxm7lo/11.webp?raw=1" class="photos__card"></img>
-        <img src="images/placeholder/Photo.webp" data-src="https://www.dropbox.com/s/y78ot51bejpqjcn/12.webp?raw=1" class="photos__card"></img>
-        <img src="images/placeholder/Photo.webp" data-src="https://www.dropbox.com/s/hk6f8b6k1mnxk21/13.webp?raw=1" class="photos__card"></img>
-        <img src="images/placeholder/Photo.webp" data-src="https://www.dropbox.com/s/9e1nawclhb525ut/14.webp?raw=1" class="photos__card"></img>
-        <img src="images/placeholder/Photo.webp" data-src="https://www.dropbox.com/s/686ixp56kdndyxu/15.webp?raw=1" class="photos__card"></img>
-        <img src="images/placeholder/Photo.webp" data-src="https://www.dropbox.com/s/wjaxky3iz20pvjb/16.webp?raw=1" class="photos__card"></img>
-        <img src="images/placeholder/Photo.webp" data-src="https://www.dropbox.com/s/ug6fz4qvxynt22z/17.webp?raw=1" class="photos__card"></img>
-        <img src="images/placeholder/Photo.webp" data-src="https://www.dropbox.com/s/thj6q9c47nzzyev/18.webp?raw=1" class="photos__card"></img>
-        <img src="images/placeholder/Photo.webp" data-src="https://www.dropbox.com/s/nlmh2msq2cv1c3b/19.webp?raw=1" class="photos__card"></img>
-        <img src="images/placeholder/Photo.webp" data-src="https://www.dropbox.com/s/eozbaj277t441rd/20.webp?raw=1" class="photos__card"></img>
-        <img src="images/placeholder/Photo.webp" data-src="https://www.dropbox.com/s/18yg4q42113qpk2/21.webp?raw=1" class="photos__card"></img>
-        <img src="images/placeholder/Photo.webp" data-src="https://www.dropbox.com/s/dh1t91vedkbks18/22.webp?raw=1" class="photos__card"></img>
-        <img src="images/placeholder/Photo.webp" data-src="https://www.dropbox.com/s/2s2omrg5ys0cjvl/23.webp?raw=1" class="photos__card"></img>
-        <img src="images/placeholder/Photo.webp" data-src="https://www.dropbox.com/s/7lzg5ej3bsmyfjp/24.webp?raw=1" class="photos__card"></img>
+    <section class="approach" aria-label="Approach">
+      <div class="approach-inner">
+        <div class="approach-title"><img draggable="false" nopin="nopin" src="assets/74148.svg" alt=""><p>My focus is on design that works for the business.</p></div>
+        <p>I turn tangled user scenarios into cohesive products. This way, teams reach agreements faster, formulate ideas more precisely, and release well‑thought‑out and cohesive products.</p>
       </div>
     </section>
-    <section class="content about" id="sectionAbout">
-      <div class="about__content-group">
-        <div class="about__tr">
-          <h1 class="about__title">hey,</h1>
-          <div class="about_rectangle"></div>
-        </div>
-        <div class="about__text-group">
-          <img data-src="https://www.dropbox.com/s/ismk1m52450jnwj/1.webp?raw=1" src="images/placeholder/about.webp" class="about__selfie-mobile"></img>
-          <p class="about__text">I’m experienced designer with a background in media, edtech, art and contemporary culture. I tend to make people's lives better than before, with the help of design, creative ideas, and technologies. This drives me to work hard, be self-motivated to jump to the next level and constantly absorb new knowledge and acquire skills. I can work both with early stage startups, post product-market fit startups and corporations as well. Most of the time I work as product designer and care about complex things like how products work for people and how they are perceived. Another important thing I value is visualization. I pay a lot of attention to it. Sometimes I also create visual identity for companies. For me it's a process when I focus more on the meaning and feel like a screenwriter who is creating a history for people and visualize it with the help a graphic design.</p>
-          <video class="about__video-1" width='100%' autoplay='true' playsinline='' loop='true' muted='true\'>
-            <source src='https://www.dropbox.com/s/dnux4tdog19pfl8/paris_compressed.mp4?raw=1' type='video/mp4'>
-          </video>
-          <p class="about__text"> <span class="about__text_normal">2022–Now, Freelancer, The Earth.</span> With friends and co-worker we work as a design unit for interesting projects and fun</p>
-          <p class="about__text"> <span class="about__text_normal">2020–2022, Yandex, Moscow.</span> I was responsible for user interface and its identity for English learning platform by Yandex Praktikum</p>
-          <p class="about__text"> <span class="about__text_normal">2018–2020, Rambler, Moscow.</span> I designed a website, mobile apps and identity for Afisha.ru</p>
-          <p class="about__text"> <span class="about__text_normal">2016–2018, Artify Agency, Moscow.</span> Full cycle design studio. I created mobile apps and websites design from meeting with the client to presenting ready-made solutions and handing off to development</p>
-          <p class="about__text"> <span class="about__text_normal-mail">Let’s chat →</span> myachkov@yandex.ru</p>
-        </div>
+    <section class="skills-section" aria-label="Skills and experience">
+      <div class="skills-scene">
+      <div class="skills-stage">
+      <div class="skills-card" id="skills-stories" role="region" aria-roledescription="carousel" aria-label="Skills and experience stories">
+        <article class="story-slide story-skills" data-story-slide aria-label="Skills">
+          <picture class="asset-picture"><source type="image/webp" srcset="assets/optimized/skills-background.webp"><img nopin="nopin" class="skills-photo" src="assets/5bf8b.png" alt="" draggable="false" loading="eager" fetchpriority="low" decoding="async"></picture>
+          <h2>Skills</h2>
+          <ul class="skills-list">
+            <li>Product design</li><li>Product strategy</li><li>Design systems</li><li>Design and code</li>
+            <li>AI products</li><li>Brand identity</li><li>Creative direction</li><li>Design leadership</li>
+          </ul>
+        </article>
+        <article class="story-slide story-experience" data-story-slide aria-label="Experience" hidden>
+          <div class="experience-photos" aria-hidden="true">
+            <img class="experience-photo is-active" data-company="rgs" src="assets/experience/rgs.webp" alt="" nopin="nopin" draggable="false" loading="eager" fetchpriority="low" decoding="async">
+            <img class="experience-photo" data-company="yandex" src="assets/experience/yandex.webp" alt="" nopin="nopin" draggable="false" loading="eager" fetchpriority="low" decoding="async">
+            <img class="experience-photo" data-company="afisha" src="assets/experience/afisha.webp" alt="" nopin="nopin" draggable="false" loading="eager" fetchpriority="low" decoding="async">
+            <img class="experience-photo" data-company="artify" src="assets/experience/artify.webp" alt="" nopin="nopin" draggable="false" loading="eager" fetchpriority="low" decoding="async">
+          </div>
+          <h2>Experience</h2>
+          <div class="company-logos"><picture class="asset-picture"><source type="image/webp" srcset="assets/optimized/eaef1.webp"><img nopin="nopin" src="assets/eaef1.png" alt="Rosgosstrakh, Yandex, Afisha and Artify" width="1212" height="240" draggable="false" loading="eager" fetchpriority="low" decoding="async"></picture></div>
+          <ul class="experience-list">
+            <li><span class="company-name">Rosgosstrakh</span><span>2022–2026</span></li>
+            <li><span class="company-name">Yandex Practicum</span><span>2020–2022</span></li>
+            <li><span class="company-name">Afisha.ru</span><span>2018–2020</span></li>
+            <li><span class="company-name">Artify Agency</span><span>2016–2018</span></li>
+          </ul>
+        </article>
+        <div class="skills-progress" aria-hidden="true"><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span></div>
+        <span class="visually-hidden" id="story-status" aria-live="polite"></span>
       </div>
-      <img data-src="https://www.dropbox.com/s/ismk1m52450jnwj/1.webp?raw=1" src="images/placeholder/about.webp" class="about__selfie"></img>
-    </section>
-    <section class="nav" id="sectionNav">
-      <div class="nav__links">
-        <button onclick="showBlock('sectionHome')" class="nav__link nav__link_close" id="closeButton">Close ...</button>
-        <button onclick="showBlock('sectionWorks')" class="nav__link nav__link_works" id="worksButtons">Works</button>
-        <button onclick="showBlock('sectionNotes')" class="nav__link nav__link_notes" id="notesButton">Notes</button>
-        <button onclick="showBlock('sectionPhotos')" class="nav__link nav__link_photos" id="photosButton">Photos</button>
-        <button onclick="showBlock('sectionAbout')" class="nav__link nav__link_about" id="aboutButton">About</button>
+      <div class="skills-follow">
+        <div class="work-intro"><p>I worked on Rosgosstrakh’s customer account and defined how customers manage policies, file claims, and receive payouts.</p></div>
+        <div class="shots"><div class="shots-tabs"><span>Shots</span><span>Cases</span></div><div class="shots-rail" role="region" tabindex="0" aria-label="Selected works"></div></div>
       </div>
-      <div class="nav__rectangle" id="navRectangle"></div>
-    </section>
-    <section class="nav-projects" id="sectionNavProject">
-      <div class="nav__links">
-        <button onclick="showImageGrid('projects__grid')" class="nav__link nav__link_projects-close" id="closeProjectsButton">Close</button>
       </div>
-      <div class="nav__rectangle" id="navRectangle"></div>
-    </section>
-    <section class="contacts" id="sectionContacts">
-      <div class="contacts__rectangle"></div>
-      <button onclick="showContacts()" class="contacts__button" id="contactsButton">Contacts</button>
-      <button onclick="showProjects()" class="contacts__button_projects" id="projectsButton">Go To Cases →</button>
+      <footer class="site-footer" role="contentinfo" inert><div><img nopin="nopin" draggable="false" class="footer-sign" src="assets/optimized/footer-sign.webp" alt="" loading="eager" fetchpriority="low">
+    <section class="scroll-time" data-scroll-time aria-label="Time spent exploring">
+      <div class="scroll-time-content">
+        <img draggable="false" nopin="nopin" src="assets/scroll-time.svg" alt="" width="36" height="36">
+        <p data-scroll-time-text aria-live="off">You’ve reached the end. <a href="https://t.me/rusmyachkov" target="_blank" rel="noopener noreferrer">Say hello on Telegram.</a></p>
+      </div>
+    </section></div>
+    <nav class="footer-socials" aria-label="Contacts">
+      <a href="mailto:rmyachkov@yandex.ru" aria-label="Email"><img src="assets/2c9d6.svg" alt=""></a>
+      <a href="https://www.linkedin.com/in/ruslan-myachkov-703319bb/?isSelfProfile=true" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><img src="assets/f7d25.svg" alt=""></a>
+      <a href="https://t.me/rusmyachkov" aria-label="Telegram" target="_blank" rel="noopener noreferrer"><img src="assets/aec9a.svg" alt=""></a>
+      <a href="https://ru.pinterest.com/myachkov/" aria-label="Pinterest" target="_blank" rel="noopener noreferrer"><img src="assets/0f50f.svg" alt=""></a>
+    </nav></footer>
+      </div>
+      <div class="footer-runway" aria-hidden="true"></div>
     </section>
   </main>
-  <script src="./scripts/index.js"></script>
+  <dialog class="works-dialog" id="works" aria-label="Selected works">
+    <button class="works-close" type="button" autofocus>
+      <span class="works-close-surface" aria-hidden="true"></span>
+      <img draggable="false" nopin="nopin" class="works-close-icon" src="assets/b01b3.svg" alt="">
+      <span class="works-close-label">Close</span>
+    </button>
+    <div class="works-scroll" data-lenis-prevent>
+      <div class="works-grid"></div>
+    </div>
+  </dialog>
 </body>
 </html>

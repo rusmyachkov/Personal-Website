@@ -1,0 +1,4 @@
+html[lang="ru"] .portrait-caption > div { container-type:inline-size; }
+html[lang="ru"] .portrait-subtitle { white-space:nowrap; font-size:inherit; }
+@supports (font-size:1cqi) { html[lang="ru"] .portrait-subtitle { font-size:min(1em, 9cqi); } }
+@media (max-width:700px) { html[lang="ru"] .ru-intro-break { display:none; } }

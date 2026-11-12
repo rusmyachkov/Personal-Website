@@ -1,0 +1,3 @@
+/* Preserve the grid's initial inset while letting moving cards reach the viewport. */
+.mosaic { overflow: visible; }
+.central-primary { width: 100%; }

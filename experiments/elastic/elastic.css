@@ -1,0 +1,5 @@
+/* Keep the pointer target stable while its visible surface changes size. */
+.elastic-hover-experiment .mosaic .tile-surface {
+  pointer-events: none;
+  transition: transform 200ms cubic-bezier(.23, 1, .32, 1);
+}

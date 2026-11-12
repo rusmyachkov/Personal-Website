@@ -1,0 +1,193 @@
+/* Figma foundations: 779:31010. Shared by all three scroll versions. */
+:root {
+  --color-black: #000;
+  --color-black-50: rgb(0 0 0 / 50%);
+  --color-white: #fff;
+  --color-white-50: rgb(255 255 255 / 50%);
+  --color-background: #f9f9fa;
+  --font-small-size: 18px;
+  --font-small-leading: 22px;
+  --font-small-tracking: -.5px;
+  --font-big-size: 36px;
+  --font-big-leading: 40px;
+  --font-big-tracking: -1.5px;
+  color: var(--color-black);
+  background: var(--color-background);
+}
+.intro-stage {
+  --hero-inset: 64px;
+  --hero-gap: 64px;
+  background: var(--color-background);
+}
+/* The inset positions the starting grid, but must never clip flying cards. */
+.mosaic { overflow: visible; }
+.central-primary { width: 100%; }
+.asset-picture > source { display: none; }
+
+/* First Screen (774:1184 / 798:103079) and Main Text (774:855). */
+.intro-copy {
+  width: min(900px, calc(100% - 128px));
+  font-size: var(--font-big-size);
+  line-height: var(--font-big-leading);
+  letter-spacing: var(--font-big-tracking);
+}
+.intro-copy .muted { color: var(--color-black-50); }
+.portrait-caption {
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  gap: 12px;
+  font-size: var(--font-small-size);
+  line-height: var(--font-small-leading);
+  letter-spacing: var(--font-small-tracking);
+  color: var(--color-white);
+}
+.portrait-caption > div { width: 100%; }
+.portrait-caption .monogram { width: 32px; height: 32px; }
+.portrait-subtitle { opacity: 1; color: var(--color-white-50); }
+.socials { gap: 20px; }
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .socials a img, .footer-socials a img { transition: transform 180ms ease; }
+  .socials a:hover img, .footer-socials a:hover img { transform: scale(1.15); }
+}
+
+/* My focus: desktop 779:31418, mobile 779:31417. */
+.approach { padding: 64px; }
+.approach-inner {
+  width: 100%;
+  max-width: 900px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  font-size: var(--font-big-size);
+  line-height: var(--font-big-leading);
+  letter-spacing: var(--font-big-tracking);
+}
+.approach-title { gap: 20px; }
+.approach-title img { width: 180px; height: 180px; }
+
+/* Shared story card, with Skills / Experience as its two slides. */
+.skills-section { padding: 64px; }
+.skills-card {
+  width: min(640px, 100%);
+  height: 800px;
+  font-size: var(--font-small-size);
+  line-height: var(--font-small-leading);
+  letter-spacing: var(--font-small-tracking);
+  color: var(--color-white);
+}
+.story-slide { padding: 60px 32px 32px; }
+.story-slide h2 {
+  color: var(--color-white);
+  font-size: var(--font-big-size);
+  line-height: var(--font-big-leading);
+  letter-spacing: var(--font-big-tracking);
+}
+.skills-photo {
+  top: -8.875%;
+  bottom: auto;
+  height: 112.625%;
+  width: auto;
+  aspect-ratio: 1068 / 1504;
+  max-width: none;
+  object-fit: cover;
+}
+.skills-list { gap: 12px 16px; padding-inline: 32px; }
+.story-experience {
+  --experience-logo-bottom: 82px;
+  --experience-blur-start: clamp(0px, calc(100% - var(--experience-logo-bottom) - var(--case-logo-size, 56px)), 62.8125%);
+  background: #646456;
+  color: var(--color-white);
+}
+.experience-photos {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.experience-photos:not(.experience-photos--blurred)::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0 / 24%);
+}
+.experience-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+}
+.experience-photo.is-active { opacity: 1; }
+.experience-photos--blurred {
+  -webkit-mask-image: linear-gradient(transparent var(--experience-blur-start), #000);
+  mask-image: linear-gradient(transparent var(--experience-blur-start), #000);
+}
+@media (max-width: 700px) {
+  .skills-photo { inset: 0; width: 100%; height: 100%; }
+  .story-experience { --experience-logo-bottom: clamp(70px, calc(var(--story-height, 274px) * .3), 82px); }
+}
+.company-logos { max-width: none; padding: 0 64px; }
+.experience-list { gap: 12px; padding: 0 32px; }
+.experience-list li { gap: 8px; }
+.experience-list li span:not(.company-name) { color: var(--color-white-50); }
+.experience-list a { text-decoration: none; }
+.experience-list a:hover { text-decoration: underline; text-decoration-color: currentColor; }
+.skills-progress { top: 32px; left: 32px; right: 32px; }
+.skills-progress > span { background: var(--color-white-50); }
+
+/* Time Tracking: Figma 832:58855, shown after the stories. */
+.scroll-time { padding: 0 10px 64px; }
+.scroll-time-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: min(560px, 100%);
+  min-height: 88px;
+  margin: 0 auto;
+  padding: 0 10px;
+  color: var(--color-black-50);
+  font-size: var(--font-small-size);
+  line-height: var(--font-small-leading);
+  letter-spacing: var(--font-small-tracking);
+  text-align: center;
+}
+.scroll-time-content img { display: block; width: 36px; height: 36px; }
+.scroll-time-content p { width: 100%; }
+.scroll-time-content a { color: var(--color-black); text-decoration: none; }
+.scroll-time-content a:hover { text-decoration: underline; }
+.scroll-time-word { display: inline-block; }
+
+@media (max-width: 700px) {
+  .portrait-caption > div { container-type: inline-size; }
+  .portrait-subtitle { white-space: nowrap; font-size: clamp(10px, 3vw, 18px); }
+  @supports (font-size: 1cqi) {
+    .portrait-subtitle { font-size: min(18px, 9.5cqi); }
+  }
+  .intro-stage { --hero-inset: 48px; --hero-gap: 48px; }
+  .intro-copy { width: calc(100% - 20px); }
+  .approach { padding: 48px 20px; }
+  .approach-inner {
+    max-width: 640px;
+    gap: 24px;
+    font-size: var(--font-small-size);
+    line-height: var(--font-small-leading);
+    letter-spacing: var(--font-small-tracking);
+  }
+  .approach-title { gap: 16px; }
+  .approach-title img { width: 72px; height: 72px; }
+  .skills-section { padding: 48px 10px; }
+  .scroll-time { padding-bottom: 48px; }
+  .story-slide { padding: 52px 24px 24px; }
+  .skills-list { padding: 0; }
+  .company-logos, .experience-list { padding: 0 16px; }
+  .skills-progress { top: 24px; left: 24px; right: 24px; }
+}
+@media (max-width: 360px) {
+  .story-slide .experience-list { font-size: var(--font-small-size); }
+}
+@media (max-width: 450px) {
+  /* Reserve the three-line mobile message before its measured time appears. */
+  .scroll-time-content { min-height: 110px; }
+}
