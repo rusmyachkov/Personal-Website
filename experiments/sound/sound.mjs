@@ -83,8 +83,8 @@ function updateToggle() {
   toggle.setAttribute('aria-pressed', String(soundEnabled));
   toggle.setAttribute('aria-label', soundEnabled ? (window.portfolioLanguage === 'ru' ? 'Выключить звук' : 'Mute sounds') : (window.portfolioLanguage === 'ru' ? 'Включить звук' : 'Turn on sounds'));
   toggle.innerHTML = soundEnabled
-    ? `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Z"/><path d="M16 9a5 5 0 0 1 0 6M19 6a9 9 0 0 1 0 12"/></svg><span>${window.portfolioLanguage === 'ru' ? 'Звук включён' : 'Sound on'}</span>`
-    : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4ZM17 9l4 6m0-6-4 6"/></svg><span>${window.portfolioLanguage === 'ru' ? 'Звук выключен' : 'Sound off'}</span>`;
+    ? `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Z"/><path d="M16 9a5 5 0 0 1 0 6M19 6a9 9 0 0 1 0 12"/></svg><span>${window.portfolioLanguage === 'ru' ? 'Звук' : 'Sound'}</span>`
+    : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4ZM17 9l4 6m0-6-4 6"/></svg><span>${window.portfolioLanguage === 'ru' ? 'Звук' : 'Sound'}</span>`;
 }
 updateToggle();
 document.addEventListener('portfolio-language-change', updateToggle);
