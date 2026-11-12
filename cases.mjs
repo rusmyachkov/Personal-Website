@@ -4,28 +4,28 @@ const BEHANCE_PLACEHOLDER = 'https://www.behance.net/';
 
 const cases = [
   {
-    id: 'account', study: true, title: 'Rosgosstrakh’s customer account.',
+    id: 'account', slug: 'rosgosstrakh-account', study: true, title: 'Rosgosstrakh’s customer account.',
     description: 'I updated the account so customers can check coverage, manage policies, and get help in one place.',
     date: 'From 2024 to 2026', action: 'View case study',
     covers: { desktop: 'assets/case-account/cover-desktop.webp', mobile: 'assets/case-account/cover-mobile.webp' },
   },
   {
-    id: 'inspection', study: true, title: 'Rosgosstrakh’s vehicle self-inspection.',
+    id: 'inspection', slug: 'rosgosstrakh-self-inspection', study: true, title: 'Rosgosstrakh’s vehicle self-inspection.',
     description: 'I worked out how drivers could photograph damage after an accident and send the photos through the app.',
     date: 'From 2022 to 2023', desktop: 'd45db', mobile: '5021c', action: 'View case study',
   },
   {
-    id: 'home', href: 'https://www.behance.net/gallery/160957293/My_Service-Home', title: 'My Service Dom',
+    id: 'home', slug: 'my-service-home', href: 'https://www.behance.net/gallery/160957293/My_Service-Home', title: 'My Service Dom',
     description: 'helps to deal with household issues: change or repair bathroom facilities and electricity, schedule annual control of utility systems throughout, control the repair works and order cleaning services.',
     date: 'From 2021 to 2022', desktop: '4ee14', mobile: '79bf6', action: 'View on Behance',
   },
   {
-    id: 'auto', href: 'https://www.behance.net/gallery/161122283/My_Service-Auto', title: 'My Service Auto',
+    id: 'auto', slug: 'my-service-auto', href: 'https://www.behance.net/gallery/161122283/My_Service-Auto', title: 'My Service Auto',
     description: 'takes care of a car or a motorcycle: technical or legal consultations, repair works maintenance, evacuation, seasonal service, assistance with a car sale or purchase.',
     date: 'From 2021 to 2022', desktop: '0de24', mobile: '09d7a', action: 'View on Behance',
   },
   {
-    id: 'med', href: 'https://www.behance.net/gallery/160934969/My_Service-Med', title: 'My Service Med',
+    id: 'med', slug: 'my-service-med', href: 'https://www.behance.net/gallery/160934969/My_Service-Med', title: 'My Service Med',
     description: 'takes care of all medical requests: a clinic search, making doctor’s appointments, online-consultations, keeping general medical records.',
     date: 'From 2021 to 2022', desktop: 'eb0dc', mobile: 'dd8c9', action: 'View on Behance',
   },
@@ -134,13 +134,21 @@ export function mountCases(section, onChange = () => {}) {
   tabs.innerHTML = '<button type="button" role="tab" id="shots-tab" aria-controls="shots-panel" aria-selected="true"></button><button type="button" role="tab" id="cases-tab" aria-controls="cases-panel" aria-selected="false" tabindex="-1"></button>';
   const [shotsTab, casesTab] = tabs.querySelectorAll('button');
   const originalTitle = document.title;
-  const routeCase = () => cases.find(item => item.id === new URL(location.href).searchParams.get('case'));
+  const routeCase = () => {
+    const url = new URL(location.href);
+    const path = url.pathname.replace(/\/+$/, '');
+    return cases.find(item => path === `/cases/${item.slug}`)
+      || cases.find(item => item.id === url.searchParams.get('case'));
+  };
   function caseUrl(id) {
     const url = new URL(location.href);
-    if (id) url.searchParams.set('case', id);
-    else url.searchParams.delete('case');
+    if (id) url.pathname = `/cases/${cases.find(item => item.id === id).slug}/`;
+    else if (url.pathname.startsWith('/cases/')) url.pathname = '/';
+    url.searchParams.delete('case');
     return url;
   }
+  const legacyCase = cases.find(item => item.id === new URL(location.href).searchParams.get('case'));
+  if (legacyCase) history.replaceState(history.state, '', caseUrl(legacyCase.id));
   function openStudy(origin, card, rail, item) {
     if (activeCaseStudyId()) return;
     history.pushState({ ...history.state, portfolioCasePushed: true }, '', caseUrl(item.id));
