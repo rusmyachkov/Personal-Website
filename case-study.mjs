@@ -1,4 +1,4 @@
-import { accountStudyContent, accountStudyImages } from './case-account.mjs?v=4';
+import { accountStudyContent, accountStudyImages } from './case-account.mjs?v=5';
 
 const asset = name => `assets/case-inspection/${name}.webp`;
 const image = (name, extra = '') => `<div class="study-media ${extra}"><img src="${asset(name)}" alt="" loading="lazy" decoding="async"></div>`;
@@ -222,7 +222,7 @@ export async function openCaseStudy(origin, card, rail, caseId = 'inspection') {
   if (active) return;
   setup();
   renderCase(caseId);
-  active = {origin,card,rail,hidden:[],closing:false};
+  active = {origin,card,rail,caseId,hidden:[],closing:false};
   const state=active;
   const source=card.querySelector('img');
   if (!source) { active=null; return; }
@@ -295,3 +295,6 @@ async function closeCase() {
   document.dispatchEvent(new Event('case-study-visibility'));
   state.origin.focus({preventScroll:true});
 }
+
+export function activeCaseStudyId() { return active?.caseId || null; }
+export function closeCaseStudy() { return closeCase(); }

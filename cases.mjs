@@ -1,4 +1,4 @@
-import { openCaseStudy } from './case-study.mjs?v=13';
+import { activeCaseStudyId, closeCaseStudy, openCaseStudy } from './case-study.mjs?v=14';
 
 const BEHANCE_PLACEHOLDER = 'https://www.behance.net/';
 
@@ -133,6 +133,24 @@ export function mountCases(section, onChange = () => {}) {
   tabs.setAttribute('role', 'tablist');
   tabs.innerHTML = '<button type="button" role="tab" id="shots-tab" aria-controls="shots-panel" aria-selected="true"></button><button type="button" role="tab" id="cases-tab" aria-controls="cases-panel" aria-selected="false" tabindex="-1"></button>';
   const [shotsTab, casesTab] = tabs.querySelectorAll('button');
+  const originalTitle = document.title;
+  const routeCase = () => cases.find(item => item.id === new URL(location.href).searchParams.get('case'));
+  function caseUrl(id) {
+    const url = new URL(location.href);
+    if (id) url.searchParams.set('case', id);
+    else url.searchParams.delete('case');
+    return url;
+  }
+  function openStudy(origin, card, rail, item) {
+    if (activeCaseStudyId()) return;
+    history.pushState({ ...history.state, portfolioCasePushed: true }, '', caseUrl(item.id));
+    updateRouteTitle();
+    openCaseStudy(origin, card, rail, item.id);
+  }
+  function updateRouteTitle() {
+    const item = routeCase();
+    document.title = item ? `${caseCopy(item, window.portfolioLanguage === 'ru').title} — Руслан Мячков` : originalTitle;
+  }
   shots.id = 'shots-panel';
   shots.setAttribute('role', 'tabpanel');
   shots.setAttribute('aria-labelledby', 'shots-tab');
@@ -167,8 +185,8 @@ export function mountCases(section, onChange = () => {}) {
       trigger.setAttribute('aria-haspopup', 'dialog');
       action.type = 'button';
       action.className = 'case-link';
-      action.addEventListener('click', () => openCaseStudy(action, article, desktop, item.id));
-      trigger.addEventListener('click', () => openCaseStudy(trigger, article, desktop, item.id));
+      action.addEventListener('click', () => openStudy(action, article, desktop, item));
+      trigger.addEventListener('click', () => openStudy(trigger, article, desktop, item));
     } else {
       trigger.className = 'case-desktop-image-link';
       trigger.href = item.href;
@@ -208,7 +226,7 @@ export function mountCases(section, onChange = () => {}) {
       more.className = 'case-link';
       button.dataset.caseOpen = 'true';
       button.setAttribute('aria-haspopup', 'dialog');
-      more.addEventListener('click', () => openCaseStudy(more, wrapper, rail, item.id));
+      more.addEventListener('click', () => openStudy(more, wrapper, rail, item));
     }
     wrapper.append(button, more);
     const paragraph = description();
@@ -219,7 +237,7 @@ export function mountCases(section, onChange = () => {}) {
       if (item.study && wrapper.classList.contains('is-active') && (tappedCase === item.id || event.detail === 0)) {
         // Let the opening cue play without also triggering the selection tap.
         event.preventDefault();
-        openCaseStudy(button, wrapper, rail, item.id);
+        openStudy(button, wrapper, rail, item);
       } else {
         tappedCase = item.id;
         selectCase(index, true);
@@ -259,6 +277,7 @@ export function mountCases(section, onChange = () => {}) {
       more.setAttribute('aria-label', isRu ? `Подробнее: ${copy.title}` : `More about ${copy.title}`);
     }
     updateSelectionLabels(isRu);
+    updateRouteTitle();
   }
 
   function selectCase(index, reveal = false) {
@@ -311,5 +330,44 @@ export function mountCases(section, onChange = () => {}) {
     setTab(next);
     next.focus();
   });
+  document.addEventListener('case-study-closing', () => {
+    if (!routeCase()) return;
+    if (history.state?.portfolioCasePushed) history.back();
+    else history.replaceState(history.state, '', caseUrl(null));
+    updateRouteTitle();
+  });
+  function syncCaseRoute() {
+    const item = routeCase();
+    updateRouteTitle();
+    if (!item) {
+      if (activeCaseStudyId()) closeCaseStudy();
+      return;
+    }
+    setTab(casesTab);
+    const index = cases.indexOf(item);
+    tappedCase = item.id;
+    selectCase(index, false);
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      const runway = document.querySelector('.footer-runway');
+      if (runway) {
+        const target = window.scrollY + runway.getBoundingClientRect().top - 2;
+        if (window.portfolioLenis) window.portfolioLenis.scrollTo(target, { immediate: true });
+        else window.scrollTo(0, target);
+      }
+      const desktopEntry = desktopCards.find(entry => entry.item === item);
+      if (!matchMedia('(max-width: 700px)').matches && desktopEntry) {
+        desktop.scrollLeft = Math.max(0, desktopEntry.trigger.parentElement.offsetLeft - desktop.offsetLeft);
+      } else {
+        rail.scrollLeft = Math.max(0, cards[index].wrapper.offsetLeft - rail.offsetLeft);
+      }
+      if (!item.study || activeCaseStudyId()) return;
+      const mobileView = matchMedia('(max-width: 700px)').matches;
+      const origin = mobileView ? cards[index].button : desktopEntry.trigger;
+      const card = mobileView ? cards[index].wrapper : desktopEntry.trigger.parentElement;
+      openCaseStudy(origin, card, mobileView ? rail : desktop, item.id);
+    }));
+  }
+  window.addEventListener('popstate', syncCaseRoute);
+  if (routeCase()) setTimeout(syncCaseRoute, 0);
   return panel;
 }

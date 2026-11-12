@@ -110,7 +110,7 @@ function artPosition(card) {
 
 function artwork(card, eager) {
   if (card.video) {
-    return `<span class="account-art"><video muted loop playsinline disablepictureinpicture disableremoteplayback preload="none" poster="${travelPoster}" data-src="${travelVideo}" data-reduced-motion="poster" aria-hidden="true"></video></span>`;
+    return `<span class="account-art"><video autoplay muted loop playsinline disablepictureinpicture disableremoteplayback preload="metadata" poster="${travelPoster}" src="${travelVideo}" aria-hidden="true"></video></span>`;
   }
   return `<span class="account-art${card.dimmed ? ' account-art--dimmed' : ''}"${artPosition(card)}><img src="${asset(card.name)}" alt="" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async" draggable="false" nopin="nopin"></span>`;
 }

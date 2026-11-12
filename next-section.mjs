@@ -1,7 +1,7 @@
 import { worksRows } from './works-data.mjs?v=6';
 import { attachCardTilt } from './card-tilt.mjs?v=4';
-import { caseCoverImages, mountCases } from './cases.mjs?v=24';
-import { caseStudyImages } from './case-study.mjs?v=13';
+import { caseCoverImages, mountCases } from './cases.mjs?v=25';
+import { caseStudyImages } from './case-study.mjs?v=14';
 import { preloadGallery } from './gallery-preload.mjs?v=3';
 
 const section = document.querySelector('.skills-section');
