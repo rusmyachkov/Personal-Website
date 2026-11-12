@@ -184,7 +184,7 @@
   to { transform: translateY(0); }
 }
 
-/* White-edged screenshots blend into the page without a fine inset outline. */
+/* A soft warm edge separates white screenshots from the page. */
 .shots-rail .shot-card:is(
   [data-work="ecb6d"], [data-work="79fb3"], [data-work="02dd1"],
   [data-work="fd91d"], [data-work="cb3af"], [data-work="016f2"],
@@ -197,7 +197,7 @@
   position: absolute;
   z-index: 1;
   inset: 0;
-  border: 1px solid #eaeaea;
+  border: 1px solid #f1ece8;
   border-radius: inherit;
   mix-blend-mode: darken;
   pointer-events: none;
