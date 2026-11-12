@@ -302,7 +302,7 @@ function update() {
   // Both story titles share one position. Animate the remaining layout rather
   // than switching padding and type size at a scroll threshold.
   const endFont = mobile ? Math.max(22, Math.min(36, currentHeight * .15)) : 36;
-  const logoSize = mobile && cardViewport <= 740 ? Math.max(36, Math.min(56, currentHeight * .22)) : 56;
+  const logoSize = mobile ? (cardViewport <= 740 ? Math.max(36, Math.min(56, currentHeight * .22)) : 56) - 8 : 56;
   const heightValue = `${currentHeight}px`;
   const widthValue = `${baseHeight * .8}px`;
   const initialTop = Math.max(10, (viewport - expandedHeight) / 2);
