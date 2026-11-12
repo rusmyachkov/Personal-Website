@@ -1,4 +1,4 @@
-import { measureScene, wrapIntroWords } from './scene-layout.mjs?v=figma-components-3';
+import { measureScene, wrapIntroWords } from './scene-layout.mjs?v=figma-components-4';
 
 const runway = document.querySelector('.intro-runway');
 const stage = document.querySelector('.intro-stage');

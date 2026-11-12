@@ -1,4 +1,4 @@
-import { measureScene, wrapIntroWords } from '../../scene-layout.mjs?v=figma-components-3';
+import { measureScene, wrapIntroWords } from '../../scene-layout.mjs?v=figma-components-4';
 
 // Windows wheel events arrive in larger steps than trackpad scrolling. Smooth
 // those steps without taking over touch input or the case/gallery scroll areas.

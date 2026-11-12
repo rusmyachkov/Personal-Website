@@ -10,7 +10,7 @@
   --font-small-tracking: -.2px;
   --font-big-size: 36px;
   --font-big-leading: 40px;
-  --font-big-tracking: -1.5px;
+  --font-big-tracking: -1.1px;
   color: var(--color-black);
   background: var(--color-background);
 }

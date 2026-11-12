@@ -36,7 +36,7 @@
 .work-copy p.is-active { visibility: visible; }
 .work-more { display: block; margin-top: 4px; color: rgb(0 0 0 / 50%); text-decoration: underline; text-underline-offset: 3px; }
 .shots { width: 100%; height: calc(64px + var(--shots-height, 246px)); overflow: visible; }
-.shots-tabs { position: relative; z-index: 2; display: flex; align-items: center; justify-content: flex-start; gap: 16px; margin-bottom: 24px; font-size: 36px; line-height: 40px; letter-spacing: -1.5px; }
+.shots-tabs { position: relative; z-index: 2; display: flex; align-items: center; justify-content: flex-start; gap: 16px; margin-bottom: 24px; font-size: 36px; line-height: 40px; letter-spacing: var(--font-big-tracking); }
 .shots-tabs button { padding: 0; border: 0; background: none; color: rgb(0 0 0 / 50%); font: inherit; letter-spacing: inherit; }
 .shots-tabs button + button { border-left: 1px solid #e3e3e3; padding-left: 16px; }
 .shots-tabs button[aria-selected="true"] { color: #000; }
