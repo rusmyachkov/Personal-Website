@@ -23,8 +23,99 @@
 .language-toggle:not([hidden]) { display: flex; }
 .case-study-dialog .language-toggle { position: absolute; }
 .language-toggle:focus-visible { outline: 2px solid #3266eb; outline-offset: 3px; }
+.toggle-surface { display: none; }
+.toggle-icon-slot { display: contents; }
 @media (max-width: 700px) {
   .sound-toggle, .language-toggle { top: 10px; }
   .sound-toggle { right: 10px; }
   .language-toggle { left: 10px; }
+
+  /* The pill changes shape on a composited surface; the page never relayouts. */
+  .controls-enhanced :is(.sound-toggle, .language-toggle) {
+    isolation: isolate;
+    padding-left: 35px;
+    gap: 0;
+    border-color: transparent;
+    background: transparent;
+    box-shadow: none;
+    clip-path: inset(-24px -24px -24px -24px);
+  }
+  .controls-enhanced .toggle-surface {
+    display: block;
+    position: absolute;
+    inset: -1px;
+    z-index: -1;
+    pointer-events: none;
+    filter: drop-shadow(0 4px 8px rgb(0 0 0 / 10%));
+  }
+  .controls-enhanced .toggle-surface::before,
+  .controls-enhanced .toggle-surface::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgb(0 0 0 / 8%);
+    clip-path: inset(0 0 0 0 round 999px);
+  }
+  .controls-enhanced .toggle-surface::after {
+    inset: 1px;
+    background: rgb(255 255 255 / 94%);
+  }
+  .controls-enhanced .toggle-icon-slot {
+    display: block;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  .controls-enhanced .toggle-icon-slot svg {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .controls-enhanced :is(.sound-toggle, .language-toggle) > span {
+    white-space: nowrap;
+    opacity: 1;
+  }
+  .controls-motion-ready :is(.sound-toggle, .language-toggle),
+  .controls-motion-ready .toggle-surface::before,
+  .controls-motion-ready .toggle-surface::after {
+    transition: clip-path 260ms cubic-bezier(.23, 1, .32, 1);
+  }
+  .controls-motion-ready .toggle-icon-slot {
+    transition: transform 260ms cubic-bezier(.23, 1, .32, 1);
+  }
+  .controls-motion-ready :is(.sound-toggle, .language-toggle) > span {
+    transition: opacity 160ms cubic-bezier(.23, 1, .32, 1);
+  }
+  .controls-compact .language-toggle {
+    clip-path: inset(-24px calc(100% - 62px) -24px -24px);
+  }
+  .controls-compact .sound-toggle {
+    clip-path: inset(-24px -24px -24px calc(100% - 62px));
+  }
+  .controls-compact .language-toggle .toggle-surface::before {
+    clip-path: inset(0 calc(100% - 38px) 0 0 round 999px);
+  }
+  .controls-compact .language-toggle .toggle-surface::after {
+    clip-path: inset(0 calc(100% - 36px) 0 0 round 999px);
+  }
+  .controls-compact .sound-toggle .toggle-surface::before {
+    clip-path: inset(0 0 0 calc(100% - 38px) round 999px);
+  }
+  .controls-compact .sound-toggle .toggle-surface::after {
+    clip-path: inset(0 0 0 calc(100% - 36px) round 999px);
+  }
+  .controls-compact .sound-toggle .toggle-icon-slot {
+    transform: translateX(calc(100% - 38px));
+  }
+  .controls-compact .language-toggle .toggle-icon-slot { transform: translateX(-2px); }
+  .controls-compact :is(.sound-toggle, .language-toggle) > span { opacity: 0; }
+  .controls-compact :is(.sound-toggle, .language-toggle):focus-visible { outline: none; }
+  .controls-compact :is(.sound-toggle, .language-toggle):focus-visible .toggle-surface::before { background: #3266eb; }
+}
+@media (max-width: 700px) and (prefers-reduced-motion: reduce) {
+  .controls-motion-ready :is(.sound-toggle, .language-toggle),
+  .controls-motion-ready .toggle-surface::before,
+  .controls-motion-ready .toggle-surface::after { transition-duration: 140ms; }
+  .controls-motion-ready .toggle-icon-slot { transition: none; }
 }

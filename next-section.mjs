@@ -302,7 +302,8 @@ function update() {
   // Both story titles share one position. Animate the remaining layout rather
   // than switching padding and type size at a scroll threshold.
   const endFont = mobile ? Math.max(22, Math.min(36, currentHeight * .15)) : 36;
-  const logoSize = mobile ? (cardViewport <= 740 ? Math.max(36, Math.min(56, currentHeight * .22)) : 56) - 16 : 56;
+  const logoSize = mobile ? 48 : 56;
+  const shortCard = mobile ? clamp((235 - currentHeight) / 50) : 0;
   const heightValue = `${currentHeight}px`;
   const widthValue = `${baseHeight * .8}px`;
   const initialTop = Math.max(10, (viewport - expandedHeight) / 2);
@@ -310,9 +311,9 @@ function update() {
   const cardInfoGap = mobile ? 16 : 20;
   const tabsGap = mobile ? 16 : 24;
   if (forceUpdate || transition !== lastLayoutTransition) {
-    stage.style.setProperty('--story-padding-top', `${mobile ? 40 : 60}px`);
+    stage.style.setProperty('--story-padding-top', `${mobile ? 40 - 7 * shortCard : 60}px`);
     stage.style.setProperty('--story-padding-side', `${mobile ? 24 : 32 - 8 * transition}px`);
-    stage.style.setProperty('--story-padding-bottom', `${mobile ? 24 : 32 - 8 * transition}px`);
+    stage.style.setProperty('--story-padding-bottom', `${mobile ? 24 - 12 * shortCard : 32 - 8 * transition}px`);
     stage.style.setProperty('--story-heading-size', `${36 + (endFont - 36) * transition}px`);
     stage.style.setProperty('--story-heading-line', `${40 + (endFont * 1.1 - 40) * transition}px`);
     stage.style.setProperty('--case-logo-size', `${logoSize}px`);
