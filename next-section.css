@@ -94,7 +94,7 @@
 .site-footer.is-revealing { visibility: visible; }
 .site-footer[inert] { pointer-events: none; }
 .site-footer > div { width: 100%; }
-.footer-sign { pointer-events: none; display: block; width: min(100%, 90vh, max(0px, calc(100vh - 100px))); width: min(100%, 90dvh, max(0px, calc(100dvh - 100px))); aspect-ratio: 1; object-fit: contain; margin: 0 auto -10vh; margin-bottom: -10dvh; }
+.footer-sign { pointer-events: none; display: block; width: min(100%, 75vh, max(0px, calc(100vh - 100px))); width: min(100%, 75dvh, max(0px, calc(100dvh - 100px))); aspect-ratio: 1; object-fit: contain; margin: 0 auto -4vh; margin-bottom: -4dvh; }
 .site-footer .scroll-time { width: 100%; padding: 0 0 16px; }
 .site-footer .scroll-time-content { color: rgb(255 255 255 / 50%); }
 .site-footer .scroll-time-content a {
@@ -124,9 +124,6 @@
 .site-footer .scroll-time-content img, .footer-socials img { filter: invert(1); }
 .footer-socials { display: flex; gap: 20px; }
 .footer-socials a, .footer-socials img { display: block; width: 20px; height: 20px; }
-@media (min-width: 701px) and (max-height: 650px) {
-  .footer-sign { width: min(100%, max(0px, calc(100vh - 112px))); width: min(100%, max(0px, calc(100dvh - 112px))); }
-}
 @media (max-width: 700px) {
   /* Give each story a little more distance against touch-scroll momentum. */
   .skills-section { --story-track: 780vh; }
