@@ -28,9 +28,10 @@ const footerRunway = document.querySelector('.footer-runway');
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
 const mobileQuery = matchMedia('(max-width: 700px)');
 preloadGallery(worksRows, caseCoverImages(mobileQuery.matches), caseStudyImages());
-const nativeFooterMotion = CSS.supports('animation-timeline', 'view()') &&
+const supportsNativeFooterMotion = CSS.supports('animation-timeline', 'view()') &&
   CSS.supports('timeline-scope', '--footer-motion') &&
   CSS.supports('animation-range', 'contain 0% contain 100%');
+let nativeFooterMotion = supportsNativeFooterMotion && !reduced.matches;
 const workIntro = follow.querySelector('.work-intro');
 mountCases(follow.querySelector('.shots'), showCases => {
   stage.classList.toggle('has-cases', showCases);
@@ -325,9 +326,9 @@ function update() {
     const shotsHeightValue = `${Math.max(0, shotsHeight)}px`;
     if (stage.style.getPropertyValue('--shots-height') !== shotsHeightValue) stage.style.setProperty('--shots-height', shotsHeightValue);
     const followProgress = clamp((transition - .2) / .6);
-    follow.style.opacity = reduced.matches ? Number(transition >= .5) : followProgress;
+    follow.style.opacity = followProgress;
     const followTravel = Math.max(40, viewport - cardTop - currentHeight - cardInfoGap);
-    follow.style.transform = `translateY(${reduced.matches ? 0 : (1 - followProgress) * followTravel}px)`;
+    follow.style.transform = `translateY(${(1 - followProgress) * followTravel}px)`;
     const followInert = followProgress < .5;
     if (follow.inert !== followInert) {
       follow.inert = followInert;
@@ -339,10 +340,10 @@ function update() {
     skills.forEach((item, index) => {
       const value = clamp(reveal * (skills.length + 1) - index);
       item.style.opacity = value;
-      item.style.transform = `translateY(${reduced.matches ? 0 : (1 - value) * 10}px)`;
+      item.style.transform = `translateY(${(1 - value) * 10}px)`;
     });
   }
-  const blend = reduced.matches ? Number(transition > .5) : clamp((transition - .12) / .4);
+  const blend = clamp((transition - .12) / .4);
   const experience = blend >= .5;
   if (previousReveal !== null && reveal !== previousReveal) {
     const indices = skills.map((_, index) => index);
@@ -393,7 +394,14 @@ function invalidateGeometry() { geometryDirty = true; schedule(); }
 addEventListener('scroll', schedule, { passive: true });
 addEventListener('resize', invalidateGeometry, { passive: true });
 window.visualViewport?.addEventListener('resize', invalidateGeometry, { passive: true });
-reduced.addEventListener('change', invalidateGeometry);
+reduced.addEventListener('change', () => {
+  nativeFooterMotion = supportsNativeFooterMotion && !reduced.matches;
+  if (nativeFooterMotion) {
+    footer.style.removeProperty('transform');
+    stage.style.removeProperty('transform');
+  }
+  invalidateGeometry();
+});
 if ('ResizeObserver' in window) {
   const observer = new ResizeObserver(invalidateGeometry);
   [workIntro, section, footerRunway, footer, document.querySelector('.approach'), document.querySelector('.intro-runway')]
@@ -409,7 +417,7 @@ card.querySelectorAll('[data-story-direction]').forEach(button => button.addEven
     : [...milestones].reverse().find(value => value < u - .03) ?? 0;
   const target = window.scrollY + section.getBoundingClientRect().top + storyDistance * destination / SCENE_END;
   if (window.portfolioLenis) window.portfolioLenis.scrollTo(target);
-  else window.scrollTo({ top: target, behavior: reduced.matches ? 'instant' : 'smooth' });
+  else window.scrollTo({ top: target, behavior: 'smooth' });
 }));
 function translateStories() {
   const isRu = window.portfolioLanguage === 'ru';

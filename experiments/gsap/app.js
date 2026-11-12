@@ -1,5 +1,19 @@
 import { measureScene, wrapIntroWords } from '../../scene-layout.mjs?v=figma-components-2';
 
+// Windows wheel events arrive in larger steps than trackpad scrolling. Smooth
+// those steps without taking over touch input or the case/gallery scroll areas.
+if (/Windows/i.test(navigator.userAgent) && matchMedia('(pointer: fine)').matches && window.Lenis) {
+  window.portfolioLenis = new window.Lenis({
+    autoRaf: true,
+    smoothWheel: true,
+    syncTouch: false,
+    lerp: 0.16,
+    respectReducedMotion: false,
+    prevent: node => node.id === 'skills-stories' || !!node.closest?.('.works-scroll, .case-study-scroll'),
+  });
+  window.portfolioLenis.on('scroll', () => window.ScrollTrigger?.update());
+}
+
 // Standalone comparison: native scroll with a scrubbed GSAP timeline.
 if (!window.gsap || !window.ScrollTrigger) {
   import('../../app.js?v=works-2');

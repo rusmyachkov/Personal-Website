@@ -157,13 +157,6 @@
     .skills-section { --story-track: 780svh; --footer-track: 240svh; --footer-overlap: 100lvh; }
   }
 }
-@media (prefers-reduced-motion: reduce) {
-  .skills-progress > span { transition: none; }
-  .case-mobile-item, .case-mobile-button, .case-mobile-button img, .case-mobile-item .case-link,
-  .case-desktop img, .case-desktop .case-link { transition: none; }
-  .case-desktop:hover img, .case-desktop:focus-within img { transform: none; }
-}
-
 /* Both layers move within the same sticky viewport and follow one scroll timeline. */
 @supports (animation-timeline: view()) and (timeline-scope: --footer-motion) and (animation-range: contain 0% contain 100%) {
   .skills-section { timeline-scope: --footer-motion; }
@@ -182,6 +175,10 @@
 @keyframes footer-enter {
   from { transform: translateY(100%); }
   to { transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  /* Keep the footer tied to scroll through the JS path when the browser suppresses CSS animations. */
+  .site-footer, .skills-stage { animation: none; }
 }
 
 /* A soft warm edge separates white screenshots from the page. */
