@@ -20,15 +20,11 @@ bindCopy(document.querySelector('.intro-copy p'),
 bindCopy(document.querySelector('.portrait-photo'), 'Руслан Мячков у моря', 'alt');
 bindCopy(document, 'Руслан Мячков — продуктовый дизайнер', 'title');
 
-const approachFirstSentence = 'Превращаю запутанные пользовательские сценарии в целостные продукты.';
-bindCopy(document.querySelector('.approach-title p'),
-  `Я создаю дизайн, который работает на бизнес.<span class="approach-first-sentence-mobile">${approachFirstSentence}</span>`, 'innerHTML');
-bindCopy(document.querySelector('.approach-inner > p'),
-  `<span class="approach-first-sentence-desktop">${approachFirstSentence} </span>Это помогает командам быстрее договариваться, точнее формулировать идеи и выпускать продуманные продукты.`, 'innerHTML');
-
 const copy = {
   '.portrait-caption div p:first-child': 'Руслан Мячков',
   '.portrait-subtitle': 'Лид продакт дизайнер',
+  '.approach-title p': 'Я создаю дизайн, который работает на бизнес.',
+  '.approach-inner > p': 'Превращаю запутанные пользовательские сценарии в целостные продукты. Это помогает командам быстрее договариваться, точнее формулировать идеи и выпускать продуманные продукты.',
   '.story-skills h2': 'Навыки',
   '.story-experience h2': 'Опыт',
   '.works-close-label': 'Закрыть',

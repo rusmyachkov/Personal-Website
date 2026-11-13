@@ -1,4 +1,4 @@
-import { renderLanguage } from './language.mjs?v=8';
+import { renderLanguage } from './language.mjs?v=9';
 
 const toggle = document.querySelector('.language-toggle');
 const label = toggle.querySelector('span');
